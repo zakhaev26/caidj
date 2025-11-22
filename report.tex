@@ -1,0 +1,997 @@
+\documentclass[12pt]{report}
+
+% ==================== PACKAGES ====================
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{svg}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% ==================== PAGE GEOMETRY ====================
+\geometry{
+    a4paper,
+    left=1.2in,
+    right=1in,
+    top=1in,
+    bottom=1in,
+    headheight=15pt
+}
+
+% ==================== COLORS ====================
+\definecolor{primaryblue}{RGB}{25, 55, 109}
+\definecolor{accentblue}{RGB}{65, 105, 225}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{mediumgray}{RGB}{128, 128, 128}
+
+% ==================== HYPERREF SETUP ====================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryblue,
+    citecolor=accentblue,
+    urlcolor=accentblue,
+    bookmarksdepth=3
+}
+
+% ==================== FONTS & SPACING ====================
+\renewcommand{\normalsize}{\fontsize{12}{16}\selectfont}
+\setstretch{1.5}
+
+% ==================== CHAPTER FORMATTING ====================
+\titleformat{\chapter}[display]
+    {\normalfont\Huge\bfseries\color{primaryblue}}
+    {\filleft\Large\chaptertitlename~\thechapter}
+    {1ex}
+    {\titlerule\vspace{1ex}\filleft}
+    [\vspace{1ex}\titlerule]
+
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+% ==================== SECTION FORMATTING ====================
+\titleformat{\section}
+    {\normalfont\Large\bfseries\color{primaryblue}}
+    {\thesection}{1em}{}
+    [\vspace{-0.2em}{\color{accentblue}\titlerule[1pt]}]
+
+\titleformat{\subsection}
+    {\normalfont\large\bfseries\color{primaryblue}}
+    {\thesubsection}{1em}{}
+
+% ==================== HEADER & FOOTER ====================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{\color{mediumgray}\small Technical Report}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{accentblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{accentblue}\leaders\hrule height \footrulewidth\hfill}}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+% ==================== TABLE OF CONTENTS ====================
+\renewcommand{\cftchapfont}{\bfseries\color{primaryblue}}
+\renewcommand{\cftsecfont}{\color{black}}
+\renewcommand{\cftchappagefont}{\bfseries\color{primaryblue}}
+
+% ==================== CAPTIONS ====================
+\captionsetup{
+    font=small,
+    labelfont={bf,color=primaryblue},
+    textfont=it,
+    skip=10pt
+}
+
+% ==================== DOCUMENT BEGIN ====================
+\begin{document}
+
+% ==================== TITLE PAGE ====================
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+
+        % Top decorative line
+        {\color{accentblue}\rule{\linewidth}{2pt}}
+
+        \vspace{1cm}
+
+        % Main title
+        {\Huge\bfseries\color{primaryblue}
+        Indexing for Concurrency-Aware \\ Distributed Joins
+        }
+
+        \vspace{0.5cm}
+
+        {\Large\color{mediumgray}
+        A Study of Index Structures, Concurrency Control, and Distributed Joins}
+
+
+        \vspace{0.5cm}
+
+        {\color{accentblue}\rule{\linewidth}{2pt}}
+
+        \vspace{1.2cm}
+
+        % Document type
+        {\Large\textbf{Technical Writing Report}}\\[0.3cm]
+        {\large submitted in partial fulfillment of the requirements\\
+        for the award of the}\\[0.3cm]
+        {\Large\textbf{Bachelor of Technology}}\\[0.2cm]
+        {\large in}\\[0.2cm]
+        {\Large\textbf{Information Technology}}
+
+        \vfill
+
+        % Author info box (3 authors)
+        \begin{minipage}{0.6\textwidth}
+            \begin{center}
+                \fcolorbox{accentblue}{lightgray}{
+                    \begin{minipage}{0.9\textwidth}
+                        \begin{center}
+                            \vspace{0.3cm}
+                            {\large\textbf{Submitted by}}\\[0.3cm]
+
+                            % Author 1
+                            {\Large\textbf{Soubhik Kumar Gon}}\\
+                            {\large (B422056)}\\[0.3cm]
+
+                            % Author 2
+                            {\Large\textbf{Hitanshu Satpathy}}\\
+                            {\large (B422028)}\\[0.3cm]
+
+                            % Author 3
+                            {\Large\textbf{Amit Bhagat}}\\
+                            {\large (B422007)}\\
+
+                            \vspace{0.3cm}
+                        \end{center}
+                    \end{minipage}
+                }
+            \end{center}
+        \end{minipage}
+
+        \vspace{6cm}
+
+        % Supervisor
+        {\large Under the supervision of}\\[0.3cm]
+        {\Large\textbf{Dr. Rakesh Chandra Balabantaray}}\\
+        {\large Department of Computer Science and Engineering}
+
+        \vspace{1cm}
+
+% University logo
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm]{iiit-bh-logo.png}
+\end{figure}
+
+
+        \vspace{0.5cm}
+
+        % Institution details
+        {\large\textbf{Department of Computer Science and Engineering}}\\
+        {\large International Institute of Information Technology, Bhubaneswar}
+
+    \end{center}
+\end{titlepage}
+
+% ==================== CERTIFICATE PAGE ====================
+\newpage
+\thispagestyle{plain}
+
+\vspace*{1cm}
+
+\begin{center}
+    {\color{primaryblue}\rule{\linewidth}{2pt}}
+    \vspace{0.3cm}
+
+    {\Huge\bfseries\color{primaryblue} CERTIFICATE}
+
+    \vspace{0.3cm}
+    {\color{primaryblue}\rule{\linewidth}{2pt}}
+\end{center}
+
+\vspace{2cm}
+
+\noindent This is to certify that the report entitled \textbf{"Concurrency-Aware Indexing for Efficient Distributed Joins in Modern Databases"} submitted by \textbf{Soubhik Kumar Gon (B442056), Hitanshu Satpathy (B442028), Amit Bhagat (B442007)} to \textbf{International Institute of Information Technology} is a record of bonafide work carried out under my supervision and guidance.
+
+\vspace{1cm}
+
+\noindent The report is submitted for end-semester evaluation of the B.Tech Technical Writing coursework and represents original work by the student.
+
+\vspace{1cm}
+
+\noindent To the best of my knowledge, the matter embodied in this report has not been submitted to any other institution for the award of any degree or diploma.
+
+\vfill
+
+\noindent\begin{minipage}{0.45\textwidth}
+    \textbf{Date:} \rule{3cm}{0.5pt}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \flushright
+    \vspace{1cm}
+
+    \rule{5cm}{0.5pt}\\
+    \textbf{Dr. Rakesh Ch. Balabantaray}\\
+    Supervisor\\
+    Department of CSE
+\end{minipage}
+
+% ==================== DECLARATION PAGE ====================
+\newpage
+\thispagestyle{plain}
+
+\vspace*{0.3cm}
+
+\begin{center}
+    {\color{primaryblue}\rule{\linewidth}{1.5pt}}
+    {\Large\bfseries\color{primaryblue} DECLARATION}
+    {\color{primaryblue}\rule{\linewidth}{1.5pt}}
+\end{center}
+
+\vspace{0.2cm}
+
+\noindent We hereby declare that:
+
+\begin{enumerate}[leftmargin=1.1cm, itemsep=0cm, topsep=0pt]
+    \item The work presented in this report is original and has been carried out by us under the general supervision of our advisor.
+    \item This work has not been submitted, either in part or in full, to any other institution for any degree or diploma.
+    \item We have adhered to the Institute’s Ethical Code of Conduct throughout the course of this work.
+    \item All external materials (data, analysis, figures, and text) have been properly cited and acknowledged.
+    \item All quoted materials from other sources have been placed in quotation marks and cited appropriately.
+    \item We have followed all official guidelines and regulations in preparing this report.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+\noindent\begin{minipage}{0.45\textwidth}
+    \textbf{Date:} \rule{3cm}{0.4pt}\\[0.3cm]
+    \textbf{Place:} \rule{3cm}{0.4pt}
+\end{minipage}
+\hfill
+\begin{minipage}{0.50\textwidth}
+    \raggedleft
+    \rule{5cm}{0.4pt}\\
+    \textbf{Soubhik Kumar Gon}\\
+    B422056\\[-0.1cm]
+    B.Tech IT
+
+    \vspace{0.5cm}
+
+    \rule{5cm}{0.4pt}\\
+    \textbf{Hitanshu Satpathy}\\
+    B422028\\[-0.1cm]
+    B.Tech IT
+
+    \vspace{0.5cm}
+
+    \rule{5cm}{0.4pt}\\
+    \textbf{Amit Bhagat}\\
+    B422007\\[-0.1cm]
+    B.Tech IT
+\end{minipage}
+
+% ==================== ACKNOWLEDGMENTS ====================
+\newpage
+\thispagestyle{plain}
+
+\vspace*{1cm}
+
+\begin{center}
+    {\color{primaryblue}\rule{\linewidth}{2pt}}
+    \vspace{0.3cm}
+
+    {\Huge\bfseries\color{primaryblue} ACKNOWLEDGMENTS}
+
+    \vspace{0.3cm}
+    {\color{primaryblue}\rule{\linewidth}{2pt}}
+\end{center}
+
+\vspace{0cm}
+
+I would like to express my sincere gratitude to all those who have contributed to the successful completion of this technical report.
+
+\vspace{0.4cm}
+
+First and foremost, I am deeply grateful to my supervisor, \textbf{Dr. Rakesh Chandra Balabantaray}, for their invaluable guidance, constant encouragement, and insightful feedback throughout this project. Their expertise and dedication have been instrumental in shaping this work.
+
+\vspace{0.4cm}
+
+I would like to extend my heartfelt thanks to the faculty members of the Department of Computer Science and Engineering at \textbf{Internation Institute of Information Technology} for providing an excellent academic environment and access to necessary resources and facilities.
+
+\vspace{0.5cm}
+
+I am also thankful to my peers and colleagues for their constructive discussions, suggestions, and moral support during the course of this project. Their collaboration and friendship made this journey more enriching and enjoyable.
+
+\vspace{0.4cm}
+
+Special thanks to the library and technical staff for their assistance in accessing research materials and computational resources.
+
+\vspace{0.4cm}
+
+Finally, I would like to express my deepest appreciation to my family for their unconditional love, patience, and support throughout my academic journey. Their encouragement has been my constant source of motivation.
+
+\vfill
+% ==================== ABSTRACT ====================
+\newpage
+\thispagestyle{plain}
+
+\vspace*{1cm}
+
+\begin{center}
+    {\color{primaryblue}\rule{\linewidth}{2pt}}
+    \vspace{0.3cm}
+
+    {\Huge\bfseries\color{primaryblue} ABSTRACT}
+
+    \vspace{0.3cm}
+    {\color{primaryblue}\rule{\linewidth}{2pt}}
+\end{center}
+
+\vspace{0cm}
+
+The rising need for \textbf{low-latency processing} of very large datasets has pushed modern data management systems toward \textbf{distributed, shared-nothing architectures}. In such systems, the \textbf{join operation} often becomes the most expensive step, particularly in \textbf{Hybrid Transactional and Analytical Processing (HTAP)} workloads. Earlier studies linked the cost of joins to hashing or sorting performance, but modern environments face a different challenge. With in-memory execution, multi-core processors, and fast networks, the main limitations now come from \textbf{concurrency control}. Issues such as \textbf{latch contention}, \textbf{memory access delays}, and \textbf{data skew} can significantly limit scalability and slow down distributed joins.
+
+This report examines \textbf{Concurrency-Aware Indexing} as an approach to address these problems. We compare traditional index structures with more recent \textbf{latch-free} and \textbf{optimistic} designs, including the \textbf{BW-Tree}, \textbf{Masstree}, and \textbf{Adaptive Radix Tree (ART)}, and study how they behave in distributed settings. Based on these observations, we introduce a framework that combines \textbf{lock-free indexing}, \textbf{skew-resistant partitioning}, and \textbf{hardware-assisted execution} to support more scalable and efficient distributed joins.
+
+\vspace{1cm}
+
+\noindent\textbf{Keywords:} Distributed Joins, Concurrency-Aware Indexing, Latch-Free Structures, Bw-Tree, Masstree, Adaptive Radix Tree, HTAP, Distributed Databases, Concurrency Control, Data Skew, Partitioning, RDMA, In-Memory Databases, Scalability.
+
+% ==================== TABLE OF CONTENTS ====================
+\newpage
+\tableofcontents
+
+% ==================== SAMPLE CHAPTER ====================
+\newpage
+\chapter{Introduction}
+
+\section{Background and Motivation}
+
+The architecture of modern data management systems is undergoing a significant shift. As organizations handle ever-growing volumes of data and demand \textbf{near-real-time processing}, traditional monolithic databases are increasingly unable to keep up. The surge in data volume, velocity, and variety has encouraged a move toward \textbf{distributed, shared-nothing systems} that can scale horizontally across clusters of commodity machines.
+
+Within these distributed environments, the \textbf{join operation} plays a central role. Joins are essential for reconstructing relationships across normalized data, yet they remain one of the most resource-intensive tasks in any large-scale system. The rise of \textbf{Hybrid Transactional and Analytical Processing (HTAP)} workloads has amplified this challenge. As systems attempt to support simultaneous transactional and analytical demands, the performance of distributed joins becomes a crucial determinant of overall system efficiency.
+
+Historically, the cost of joins was explained through algorithmic factors such as hashing or sorting. However, modern in-memory systems running on multi-core hardware and high-speed networks face a different bottleneck. The primary limitations now come from \textbf{concurrency control} and \textbf{memory-access latency}, rather than disk I/O. According to the Universal Scalability Law, throughput improves with increased parallelism only up to a point; beyond that, performance is constrained by \textbf{serialization} and \textbf{coordination overhead}. In practice, these limitations appear most clearly as \textbf{latch contention} within index structures.
+
+Traditional indexes like the B+ Tree were designed for an era where disk accesses dominated computation time. In such systems, the cost of acquiring a latch was negligible. Today, when data resides in DRAM and networks offer microsecond-level communication through technologies like RDMA, even small amounts of contention can severely degrade performance. A single contended cache line can cause delays across cores, and poor data distribution can lead to \textbf{hot spots}, overwhelming nodes and triggering widespread transaction aborts.
+
+These trends highlight the need for index structures that are inherently \textbf{concurrency-aware}. Instead of relying on heavy latching, modern designs embed lock-free or optimistic synchronization directly into the index itself. This allows systems to exploit multi-core hardware more effectively and achieve higher levels of parallelism without serialization bottlenecks.
+
+\section{Problem Statement}
+
+Although distributed databases have advanced significantly, most traditional indexing mechanisms struggle under modern concurrency demands. Classical structures such as the B+ Tree introduce contention points that limit scalability, especially when used for high-frequency join operations across distributed nodes. Problems such as latch contention, skewed access patterns, and memory-access delays restrict throughput and reduce the benefits of horizontal scaling.
+
+Furthermore, as HTAP workloads become more common, systems must support both transactional updates and analytical queries without compromising latency. Existing indexing approaches often fail to deliver this balance. In distributed environments, even small inefficiencies in index-level concurrency control can cascade, affecting query performance, resource usage, and overall system responsiveness.
+
+The challenge, therefore, is to design and evaluate indexing mechanisms that remain efficient under high concurrency, handle non-uniform data distributions, and support large-scale distributed join processing without introducing additional coordination overhead.
+
+\section{Research Objectives}
+
+This report aims to explore and analyze \textbf{Concurrency-Aware Indexing} as a solution to the challenges described above. The primary objectives of this study are:
+
+\begin{enumerate}[leftmargin=1.5cm, itemsep=-0.3cm]
+    \item To examine the limitations of traditional index structures in modern distributed environments.
+    \item To study modern \textbf{latch-free}, \textbf{optimistic}, and \textbf{lock-free} index designs such as the BW-Tree, Masstree, and Adaptive Radix Tree (ART).
+    \item To analyze how concurrency-aware indexes influence the performance of distributed joins in large-scale systems.
+    \item To evaluate concurrency models used by real-world distributed databases such as Google Spanner, TiKV, and FoundationDB.
+    \item To propose and describe a unified framework that integrates lock-free indexing, skew-resistant partitioning, and hardware-assisted execution.
+\end{enumerate}
+
+\section{Scope and Organization}
+
+This report focuses on the role of indexing in improving the performance of distributed joins under high concurrency. The scope includes:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item Analysis of traditional and modern index structures.
+    \item Study of concurrency bottlenecks in distributed systems.
+    \item Examination of latch-free and optimistic synchronization methods.
+    \item Evaluation of real-world distributed databases and their concurrency models.
+    \item Proposal of a framework as a comprehensive solution.
+\end{itemize}
+
+Topics such as storage-tier optimizations, non-volatile memory indexing, or specialized analytical join algorithms fall outside the primary scope of this report but are referenced when necessary for context.
+
+
+\newpage
+\chapter{Literature Survey}
+
+Modern distributed database systems have shifted from disk-focused designs to architectures centered on in-memory execution and large-scale parallelism. As data volumes grow and workloads become increasingly mixed, the join operation often becomes the determining factor for end-to-end performance. While early research concentrated on reducing disk I/O through balanced tree structures and buffering, recent studies show that concurrency overhead, skew, and memory-level interactions now dominate the cost of distributed joins. This section reviews the progression of indexing techniques, their concurrency characteristics, and the broader transaction and hardware trends that shape indexing performance in distributed environments.
+
+\subsection{Concurrency Bottlenecks in Classical B+ Tree Designs}
+
+The B+ Tree has long been the default indexing structure in relational databases due to its predictable height and block-oriented design. However, its concurrency model struggles on modern multi-core hardware. Standard latch-coupling protocols require each thread to acquire read latches while traversing internal nodes. Even with reader-writer locks, every lock acquisition triggers an atomic write, causing cache-line movement across cores. On systems with many workers probing the tree, the root latch becomes a hotspot and limits scalability. Million-scale probe operations, common in distributed joins, can effectively serialize on this latch. Optimistic schemes like Optimistic Lock Coupling reduce some of this contention but still incur validation overhead and restart costs during structural modifications.
+
+\subsection{The Latch-Free Shift: The BW Tree}
+
+The Bw-Tree introduces a latch-free design aimed at eliminating these bottlenecks. Its core idea is to avoid in-place modifications entirely. Instead of updating a node directly, the system creates a small delta record describing the change and links it to the existing node using a single atomic compare-and-swap (CAS). All nodes are accessed through a mapping table that translates logical page identifiers into physical addresses. This indirection allows the system to update node locations without rewriting parent pointers. While this approach successfully removes latching, it introduces new challenges. A heavily updated node may accumulate a long delta chain, increasing traversal time. Periodic consolidation merges the delta chain into a new base node, restoring read efficiency at the cost of additional CPU work.
+
+\begin{algorithm}
+\caption{Latch-Free Index Insert (CAS-Based)}\label{alg:insert}
+\begin{algorithmic}[1]
+\Function{IndexInsert}{$Key\ k, Value\ v, Timestamp\ ts$}
+    \State $Payload \gets \text{CreatePayload}(k, v, ts)$
+    \Loop
+        \State $CurrentAddr \gets \text{MappingTable.Get}(k)$
+        \State $NewDelta \gets \text{AllocateNode}()$
+        \State $NewDelta.Type \gets \text{INSERT}$
+        \State $NewDelta.Payload \gets Payload$
+        \State $NewDelta.Next \gets CurrentAddr$
+
+        \Comment{Atomic Compare-And-Swap}
+        \State $Success \gets \text{CAS}(\&\text{MappingTable}[k], CurrentAddr, NewDelta)$
+
+        \If{$Success$}
+            \If{$\text{ChainLength}(NewDelta) > Threshold$}
+                \State $\text{TriggerAsyncConsolidation}(k)$
+            \EndIf
+            \State \Return \textbf{true}
+        \Else
+            \State $\text{Backoff}(\text{RandomExponential}())$
+        \EndIf
+    \EndLoop
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsection{Trie Based and Hybrid Architectures}
+
+Research has also explored trie-inspired designs that improve cache locality and adapt better to variable-length keys.
+
+\textbf{Masstree} organizes keys as a trie of small B+ Trees. Each layer handles a fixed-length slice of the key, and concurrency is managed through lightweight optimistic validation. Readers avoid locks entirely. They verify a node’s version counter before and after accessing it and retry only if a conflict is detected. This allows read operations to scale with core count as long as write contention stays moderate.
+
+\textbf{Adaptive Radix Tree (ART)} provides a high-performance in-memory index by replacing comparisons with radix-based navigation. ART uses adaptive node layouts that grow or shrink based on the number of children, reducing memory waste typical of tries. Its ROWEX synchronization model ensures that readers always proceed without blocking, while writers serialize modifications using atomic operations. The result is a structure that offers fast lookups and predictable behavior under concurrency.
+
+\subsection{LSM Trees and Their Core Trade-offs}
+
+Log-Structured Merge Trees dominate modern distributed key-value stores due to their high write throughput. They buffer incoming writes in memory and periodically flush them as immutable sorted files. Although this design converts random writes into sequential ones, it complicates point lookups. A single query may need to check multiple on-disk levels and the in-memory structure. Bloom filters reduce some overhead, but false positives and memory pressure remain concerns. LSM Trees also require continuous background compaction to merge and reorganize data. Compaction can introduce latency spikes, creating unpredictable performance during distributed joins. Even optimized designs like WiscKey improve I/O locality but do not fully address the inherent read amplification of the LSM approach.
+
+\subsection{Effects of Transaction Models on Indexing}
+
+Index behavior in distributed joins is closely tied to the underlying consistency model and transaction protocol.
+
+\textbf{Google Spanner} uses tightly synchronized clocks to provide global consistency. Its interleaving design, which colocates related rows, enables efficient local joins. However, joins involving unrelated tables must fall back to distributed operators that are sensitive to network delays.
+
+\textbf{TiDB and TiKV} implement a Percolator-inspired model with multi-version concurrency control and a dedicated timestamp oracle. The two-phase commit protocol introduces locking during prewrite operations. If a join encounters keys locked by transactions in progress, the system must wait or retry, increasing latency. Under high contention, optimistic transactions may see frequent aborts.
+
+\textbf{FoundationDB} relies on optimistic concurrency control with centralized conflict resolution. Transactions submit their read and write sets for conflict checking. In workloads where many workers read and write overlapping key ranges, the probability of aborts rises sharply. Hot keys can become serialization points, limiting throughput.
+
+\subsection{Hardware Acceleration: RDMA, GPUs, and FPGAs}
+
+Recent work explores how specialized hardware can assist join and index operations.
+
+\textbf{RDMA} enables direct memory access across nodes without involving remote CPUs. Although this reduces latency for simple operations, pointer-heavy structures like trees require multiple round trips for each level. This can offset the benefits of high bandwidth.
+
+\textbf{GPUs} offer large-scale parallelism for hash-based joins. Their performance depends on minimizing branch divergence and maximizing memory throughput. The primary barrier is data transfer across the PCIe bus, which restricts GPU acceleration to cases where data fits in GPU memory.
+
+\textbf{FPGAs} are increasingly used for computational storage. They can filter or probe data as it moves from SSD to main memory, reducing the workload on the CPU during join processing. While promising, FPGA solutions require careful hardware-software co-design and remain specialized to particular use cases.
+
+\newpage
+\chapter{Problem Statement}
+
+Despite the wide range of indexing structures and hardware techniques surveyed earlier, achieving consistently efficient distributed joins remains difficult. Modern systems routinely encounter three interacting bottlenecks that prevent them from scaling cleanly across many cores and many nodes.
+
+\subsection{The Index Contention Bottleneck}
+
+During a distributed hash join or an index-nested loop join, millions of probe-side tuples may simultaneously access the index on the build side. This creates a level of concurrency that stresses even well-engineered data structures. If the index relies on pessimistic locking, such as a traditional B\textsuperscript{+} Tree, threads begin to serialize on latches and overall throughput drops sharply as cores idle. Even with optimistic techniques like Masstree’s version-based reads, heavy update activity can cause frequent validation failures. Readers observe inconsistent or ``dirty'' versions and are forced to retry. Under sustained load, this can spiral into a form of livelock where threads repeatedly restart without making progress. The cost of these aborted attempts adds up quickly and limits effective parallelism.
+
+\subsection{The Skew and Hotspot Challenge}
+
+Real datasets rarely follow uniform distributions. Many workloads exhibit Zipfian behavior where a small fraction of keys receive a disproportionate share of accesses. In a distributed join, standard hash partitioning places all tuples with the same join key on the same node. When a popular key becomes a ``heavy hitter,'' the responsible node absorbs far more requests than its peers, creating a hotspot.
+
+This leads to two related issues. First, the hotspot node’s CPU and network interfaces become saturated while other nodes remain lightly loaded, producing classic straggler behavior. Second, the specific index entries corresponding to heavy keys encounter intense contention. Even latch-free structures, such as the Bw-Tree, can suffer from CAS contention on the mapping table or the head of a delta chain when many threads target the same key. These effects combine to stall progress and limit throughput at scale.
+
+\subsection{Network Latency and Topology Mismatch}
+
+Distributed systems must operate within the constraints of network latency. Accessing local DRAM may take on the order of tens of nanoseconds, while even a fast RDMA round trip requires several microseconds. Traditional index structures are neither NUMA-aware nor network-aware, and they implicitly assume that all memory accesses have similar cost. In a distributed setting, traversing an index over the network can require multiple round trips—one for the root and additional ones for internal nodes. If a thread holds a resource, such as a transaction lock, during these remote traversals, it blocks local progress for a significant period, increasing the likelihood of conflicts.
+
+Similar issues appear within large shared-memory servers. Without awareness of NUMA boundaries, index nodes may be placed on distant sockets, forcing expensive cross-socket transfers. These interactions introduce latency that accumulates across many lookups.
+
+\medskip
+\noindent\textbf{Thesis:} Achieving near-linear scalability in distributed joins requires an indexing approach that is not only \textbf{latch-free at the local level} but also \textbf{skew-resilient} and \textbf{topology-aware} across the entire distributed system.
+
+\newpage
+\chapter{Solution}
+
+To overcome the limitations described earlier, we introduce a \textbf{solution framework} designed to make distributed joins scalable, contention-free, and topology-conscious. Rather than relying on a single data structure, the framework combines three coordinated layers: an \textbf{Adaptive Latch-Free Local Index}, a \textbf{Skew-Resilient Partitioning method} using advanced sketching techniques, and a \textbf{Hardware-Accelerated Execution path} for remote lookups. Together, these components form an integrated architecture aimed at maintaining high throughput even under extreme concurrency.
+
+\subsection{Adaptive Latch-Free Local Index }
+
+At the core of the framework lies a local index structure engineered to handle heavy probe and update traffic without resorting to locks. This component builds on the principles of the Bw-Tree but introduces improvements in reclamation, delta chain management, and NUMA awareness.
+
+\subsubsection{Delta Chain Optimization and Mapping Table}
+
+The BW-Tree's mapping table decouples node identity from physical memory, enabling lock-free updates via atomic CAS operations. Our framework extends this by implementing a \textbf{dynamic delta chain threshold}.
+
+Instead of using a fixed value (e.g., a chain length of 8), the framework adjusts the consolidation frequency based on the current read/write workload. Under read-intensive joins, the structure consolidates more aggressively (e.g., at a depth of 4) to reduce traversal overhead.
+
+Each delta record also embeds lightweight metadata (such as key range information or sibling pointers), allowing faster routing decisions without reconstructing entire base pages.
+
+\subsubsection{Epoch-Based Reclamation (EBR)}
+
+To safely reclaim memory without locks or costly reference-counting, the framework employs \textbf{Epoch-Based Reclamation}. A global epoch counter advances periodically.
+
+\textbf{Mechanism:}
+When a thread begins an index operation, it “enters” the current epoch. If a node or delta chain is replaced, the obsolete memory is tagged with epoch $E$.
+
+\textbf{Reclamation:}
+That memory is only freed once the global epoch surpasses $E + 2$, ensuring every reader that may have accessed the old memory has exited. This provides a lock-free, low-overhead memory management mechanism that scales comfortably across many cores.
+
+\subsubsection{NUMA-Aware Placement (NUMASK Logic)}
+
+Modern servers are inherently NUMA-based, yet many index structures treat all memory as uniform. Inspired by NUMASK-style designs, the index is divided into a \textbf{replicated upper tree} and \textbf{NUMA-local subtrees}.
+
+The upper levels—frequently read but rarely updated—are copied to each socket’s local memory, keeping traversal operations within local DRAM/L3 regions. This prevents cross-socket hops over QPI/UPI links, significantly lowering latency for high-frequency join probes.
+
+\subsection{Skew-Resilient Partitioning via HeavyLocker}
+
+A major barrier in distributed joins is skew: a few “heavy hitter” keys receive disproportionate traffic, overwhelming specific nodes. To counter this, the framework integrates a sketch-based technique known as \textbf{HeavyLocker}, enabling accurate, low-overhead detection of such keys.
+
+\subsubsection{The HeavyLocker Mechanism}
+
+HeavyLocker improves on classical sketches by using \textbf{lockable buckets} and a dynamic threshold that reacts to observed data volume.
+
+When an item exceeds this threshold, its bucket “locks,” ensuring the key’s counter cannot be evicted by infrequent keys. The result is extremely accurate heavy-hitter identification without the overhead of heap-based algorithms like Space Saving.
+
+\subsubsection{Adaptive Partitioning Strategy}
+
+During the build phase of the join, a lightweight HeavyLocker instance processes incoming join keys:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item \textbf{Hot Keys:} Instead of mapping all heavy-hitter keys to a single hash partition, they are \textbf{replicated} across all (or selected) nodes. A dedicated read-only index replica stores these entries, removing write contention and allowing lock-free parallel reads.
+    \item \textbf{Cold Keys:} These continue through normal hash partitioning.
+\end{itemize}
+
+This separation prevents hotspot formation and avoids the collapse of concurrency around a single index entry. By making heavy-hitter replicas read-only, the framework eliminates abort storms and OCC validation failures during the probe phase.
+
+\subsection{RDMA-Accelerated Batched Lookups}
+
+Network latency remains a dominating bottleneck in distributed join execution. The framework addresses this through \textbf{Bloom filter pushdown} and \textbf{batched RDMA reads}, dramatically reducing remote access frequency and cost.
+
+\subsubsection{Bloom Filter Pushdown (Sideways Information Passing)}
+
+Before initiating remote lookups, build-side nodes generate Bloom filters summarizing their key ranges. These filters are pushed to probe-side nodes.
+A probe thread checks this filter before contacting a remote server:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item A negative match allows immediate discard—eliminating a remote round trip.
+    \item A positive match triggers a remote fetch.
+\end{itemize}
+
+Bloom filters are compact, and with NIC-level FPGA acceleration, membership checks can be performed at line rate, providing extremely efficient semi-join reduction.
+
+\subsubsection{Batched RDMA Reads}
+
+Instead of issuing an RDMA operation for each tuple, probe keys are collected into batches (e.g., 1\,KB groups). Each batch triggers a single RDMA read to fetch the necessary remote index nodes.
+
+Following the principles of optimistic validation used in systems like FaRM, the framework:
+
+\begin{enumerate}[leftmargin=1.5cm, itemsep=0cm]
+    \item Reads the remote node’s version counter via RDMA.
+    \item Fetches the node’s payload.
+    \item Re-reads the version counter.
+\end{enumerate}
+
+If both version reads match, the result is consistent; otherwise, the client retries. This shifts concurrency control to the network layer, reducing CPU load on the remote server and preventing queue buildup.
+
+\begin{algorithm}
+\caption{Batched RDMA Remote Lookup}\label{alg:rdma}
+\begin{algorithmic}[1]
+\Function{BatchRemoteProbe}{$Keys\ batch, RemoteNodeID\ target$}
+    \State $RemoteAddrs \gets \text{LocalCache.GetAddresses}(batch)$
+    \State $WorkRequests \gets \text{List}()$
+    \For{$addr \in RemoteAddrs$}
+        \State $WR \gets \text{RDMA\_Read}(addr, Size=NodeSize)$
+        \State $WorkRequests.Add(WR)$
+    \EndFor
+
+    \State $\text{IB\_PostSend}(target.QP, WorkRequests)$
+    \State $Results \gets \text{IB\_PollCQ}(target.CQ)$
+
+    \For{$page \in Results$}
+        \If{$page.Header.Version \neq CachedVersion$}
+            \State $\text{SlowPath\_RPC}(page.Key)$ \Comment{Cache invalidation}
+        \Else
+            \State $\text{Process}(page)$
+        \EndIf
+    \EndFor
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+\newpage
+\chapter{Theoretical Analysis}
+
+This section explains why the proposed concurrency-aware indexing approach is correct, how it behaves when many operations run at the same time, and what its practical performance costs are. Each idea is broken down in simple terms.
+
+\subsection{Correctness and Linearizability}
+
+A database index must return correct results even under heavy concurrency. Two properties are essential:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item \textbf{Correctness}: the structure should never lose a key, return a half-updated entry, or show inconsistent data.
+    \item \textbf{Linearizability}: every operation (insert, read, update) should appear as if it happened instantly at one specific point in time, even if many threads are running in parallel.
+\end{itemize}
+
+To explain how modern index structures achieve these guarantees, we break down two examples often used in high-concurrency systems.
+
+\paragraph{BW-Tree Correctness:}
+
+The BW-Tree avoids locking. Instead of modifying a node directly, it creates small “delta” records that describe the change. A global mapping table stores a pointer to the latest version of each node.
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item Any update replaces the pointer in this mapping table.
+    \item This replacement uses a single atomic operation (compare-and-swap), which succeeds only if no one else changed the pointer in the meantime.
+    \item If the update succeeds, every thread immediately sees the new, correct version.
+    \item Readers reconstruct the node by following the delta records in order.
+\end{itemize}
+
+Because the mapping table is the single source of truth, and its changes are atomic, the structure behaves as if updates happen instantly at one point in time, giving linearizability.
+
+\paragraph{Masstree Correctness:}
+
+Masstree uses a small version counter inside each node to detect changes. This counter includes bits indicating whether a writer is active.
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item A reader checks the version counter before and after reading a node.
+    \item If the counter changes during the read, it means a writer overlapped with the read, and the reader retries.
+    \item This ensures a reader either sees the state before an update or after an update, but never a corrupted or partially written state.
+\end{itemize}
+
+This simple check guarantees that no keys are lost and no inconsistent view is returned.
+
+\subsection{Adaptive Query Execution (AQE)}
+
+Traditional query optimizers decide the join strategy before execution based on static statistics. If the actual data distribution changes during execution, the plan cannot adapt.
+
+Our framework uses \textbf{Adaptive Query Execution (AQE)} to adjust its behavior at runtime. It observes two key indicators:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item the success rate of Bloom filter checks (how often they help skip irrelevant rows),
+    \item the failure or retry rate of index lookups (which reveals contention).
+\end{itemize}
+
+A lightweight monitoring component tracks which keys are becoming ``hot'' (frequently accessed). If the pattern of hot keys changes, the system can adjust the join strategy during execution, for example, switching from hashing a key to broadcasting it when that becomes cheaper.
+
+This idea is similar to ``Eddies’’ in stream processing, where tuples are dynamically routed based on current system behavior.
+
+\subsection{Cost Model: Network vs.\ CPU}
+
+In distributed systems, performance depends heavily on whether data is accessed locally or over the network.
+
+Let:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item $C_{local}$ = cost of a local index lookup,
+    \item $C_{net}$ = cost of a network round trip.
+\end{itemize}
+
+\paragraph{Traditional Remote Lookup.}
+
+A standard RPC-based join costs:
+
+\[
+\text{Cost} = N \times (C_{net} + C_{remote\_cpu} + C_{local})
+\]
+
+where $C_{remote\_cpu}$ accounts for interrupts, context switches, and scheduling overhead on the remote machine.
+
+\paragraph{Using RDMA (as in our framework).}
+
+With RDMA, the NIC performs the transfer directly, avoiding CPU involvement:
+
+\[
+\text{Cost} = \frac{N}{B} \times C_{RDMA\_setup} +
+N \times C_{RDMA\_transfer} +
+C_{local}
+\]
+
+Here:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item $B$ is the batch size,
+    \item $C_{RDMA\_setup}$ is the cost of preparing an RDMA operation,
+    \item $C_{RDMA\_transfer}$ is the per-item network transfer cost handled by the NIC.
+\end{itemize}
+
+\chapter{Results and Discussion}
+
+This chapter discusses relevant performance characteristics of modern indexing
+structures and distributed join techniques based on existing literature.
+Since the proposed concurrency-aware indexing framework has not yet been
+implemented, the results presented here focus on known behaviors of its
+individual building blocks—such as latch-free indexes, skew-handling
+mechanisms, and RDMA-based lookups—rather than providing empirical data
+for the full framework.
+
+\section{Index Throughput Under Contention}
+
+To understand how concurrency affects indexing performance, we review
+established results from prior work on B+ Trees, Masstree, and latch-free
+Bw-Tree/ALLI-style structures.
+
+\begin{table}[H]
+\centering
+\caption{Local Index Throughput from Prior Literature (Million Operations per Second)}
+\begin{tabular}{c|c|c|c}
+\hline
+\textbf{Threads} & \textbf{Locked B+ Tree} & \textbf{Masstree} & \textbf{Latch-Free Bw-Tree} \\
+\hline
+1   & 1.2 & 1.1 & 0.9 \\
+16  & 4.5 & 12.3 & 11.8 \\
+32  & 5.1 & 22.4 & 21.5 \\
+64 (HT) & 3.8 & 38.2 & 42.1 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{Discussion}
+
+\textbf{Low Contention (1 thread):}
+Classic B+ Trees perform well because they avoid the overhead of mapping tables
+and delta chains. Masstree and Bw-Tree introduce additional indirections,
+so they are slightly slower in single-threaded settings.
+
+\textbf{High Contention (Many threads):}
+As concurrency increases, the locked B+ Tree becomes a bottleneck because
+all writers must acquire a latch on shared nodes. This results in:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item increased context switching,
+    \item cache-line bouncing between cores,
+    \item reduced throughput at high thread counts.
+\end{itemize}
+
+\textbf{Masstree vs.\ BW-Tree.}
+Masstree uses fine-grained locks, while the Bw-Tree uses a lock-free
+delta-update and mapping-table design. Under heavy concurrency:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item Masstree sees overhead from spinlocks and cache invalidations,
+    \item Bw-Tree benefits from a single atomic CAS operation for updates.
+\end{itemize}
+
+Both show significantly better scalability compared to lock-based indexes.
+
+\section{Impact of Skew on Distributed Joins}
+
+We analyze the known behavior of distributed joins on skewed datasets.
+These observations come from previously published evaluations of
+skew-handling mechanisms (e.g., HeavyKeeper, SpaceSaving, partial key
+replication).
+
+\subsection*{Baseline: Hash Partitioning}
+
+Under Zipfian skew ($\theta = 0.99$), hash partitioning suffers from:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item saturation of the node responsible for the hot key,
+    \item high abort rates in optimistic concurrency control,
+    \item repeated retries due to rapidly changing version counters.
+\end{itemize}
+
+This behavior is well-documented in distributed OLTP and join-processing systems.
+
+\subsection*{Skew-Aware Techniques from Literature}
+
+Prior work proposes methods such as:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item detecting hot keys using streaming sketches,
+    \item replicating frequently accessed keys as read-only copies,
+    \item isolating hot buckets to reduce write contention.
+\end{itemize}
+
+These techniques significantly reduce abort rates and restore balanced CPU usage
+across nodes.
+
+\subsection*{Insight}
+
+Even latch-free indexes slow down under extreme skew due to:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item hardware-level cache-coherence overhead,
+    \item atomic instruction contention,
+    \item increased memory traffic.
+\end{itemize}
+
+Hot-key isolation—seen in several modern systems—provides a robust way
+to avoid these bottlenecks.
+
+\section{Hardware Acceleration Impact}
+
+Hardware-aware query processing has been extensively studied in
+RDMA-enabled systems and FPGA/GPU-accelerated joins. We summarize
+established performance characteristics from literature.
+
+\subsection*{Standard RPC-based Lookup}
+
+RPC-based remote index probing incurs:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item tens to hundreds of microseconds of latency,
+    \item kernel/user context switching overhead,
+    \item CPU involvement on both client and server.
+\end{itemize}
+
+\subsection*{RDMA-Based Lookup}
+
+One-sided RDMA reads provide:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item significantly lower latency (tens of microseconds),
+    \item no server-side CPU involvement,
+    \item reduced serialization overhead due to direct memory access.
+\end{itemize}
+
+These trends remain consistent across distributed join papers.
+
+\subsection*{Bloom Filters and GPU Comparisons}
+
+FPGA-based Bloom filters help reduce unnecessary remote lookups by
+filtering non-matching tuples early.
+
+GPU hash joins deliver extremely high throughput but face:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item PCIe transfer bottlenecks,
+    \item limited memory for very large hash tables,
+    \item overhead when synchronizing with the CPU.
+\end{itemize}
+
+RDMA-based designs typically offer lower latency for large-scale joins
+because they avoid GPU data-movement limitations.
+
+\section{Future Work}
+
+Several emerging research directions are relevant for concurrency-aware indexing.
+
+\subsection*{Learned Indexes}
+
+Learned indexes model key distributions using machine learning. Their benefits
+include:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item smaller memory footprint,
+    \item faster lookup paths,
+    \item potential elimination of large mapping tables.
+\end{itemize}
+
+Adaptive models may also help detect skew more efficiently.
+
+\subsection*{Non-Volatile Memory}
+
+Persistent memory allows byte-addressable durability. Bw-Tree variants such
+as the BzTree demonstrate:
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item persistence via PMwCAS,
+    \item log-free crash recovery,
+    \item improved write performance using CLWB and memory fences.
+\end{itemize}
+
+\subsection*{Serverless and Disaggregated Storage}
+
+Modern architectures separate compute from storage. RDMA and fast networks
+enable treating remote memory as an extension of local RAM.
+Indexes must be redesigned to minimize network round-trips in these environments.
+
+\newpage
+\chapter{Conclusion}
+
+Efficient distributed joins require careful handling of concurrency, skew,
+and hardware constraints. Insights from existing research demonstrate:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=0cm]
+    \item \textbf{Local indexing:} latch-free structures like Bw-Trees scale well under high contention.
+    \item \textbf{Concurrency control:} optimistic and timestamp-based models mitigate lock contention.
+    \item \textbf{Skew management:} hot-key isolation and lightweight sketches are essential for balancing load.
+    \item \textbf{Hardware-aware design:} RDMA, Bloom filters, and modern memory hierarchies significantly reduce join latency.
+\end{itemize}
+
+These principles form the foundation for the proposed concurrency-aware indexing framework, and they highlight the importance of integrating algorithmic, architectural, and hardware-level innovations in future database systems.
+
+\begin{thebibliography}{99}
+
+\bibitem{aws_load_shedding}
+Amazon AWS.
+\newblock ``Using Load Shedding to Avoid Overload.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/}.
+
+\bibitem{faleiro_slides}
+J.~M. Faleiro.
+\newblock ``Latch-free Synchronization in Database Systems: Silver Bullet or Fool's Gold?'' (Slides).
+\newblock Accessed November 16, 2025.
+\newblock \url{https://www.cidrdb.org/cidr2017/slides/p121-faleiro-cidr17-slides.pdf}.
+
+\bibitem{blink_tree_lecture}
+CS 764 (UW–Madison).
+\newblock ``Lecture 15: Blink Tree.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://pages.cs.wisc.edu/~yxy/cs764-f22/slides/L15-notes.pdf}.
+
+\bibitem{faleiro_paper}
+J.~M. Faleiro.
+\newblock ``Latch-free Synchronization in Database Systems: Silver Bullet or Fool's Gold?''
+\newblock Accessed November 16, 2025.
+\newblock \url{http://www.jmfaleiro.com/pubs/latch-free-cidr2017.pdf}.
+
+\bibitem{leis_art_sync}
+V.~Leis et al.
+\newblock ``The ART of Practical Synchronization.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://db.in.tum.de/~leis/papers/artsync.pdf}.
+
+\bibitem{bw_tree_ms}
+Microsoft Research.
+\newblock ``The Bw-Tree: A Latch-Free B-Tree for Log-Structured Flash Storage.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://www.microsoft.com/en-us/research/publication/bw-tree-latch-free-b-tree-log-structured-flash-storage/}.
+
+\bibitem{cavallaro_blog}
+P.~Cavallaro.
+\newblock ``The Bw-Tree.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://paulcavallaro.com/blog/the-bw-tree/}.
+
+\bibitem{bwtree_cmu}
+CMU 15-721.
+\newblock ``The Bw-Tree: A B-Tree for New Hardware Platforms.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://15721.courses.cs.cmu.edu/spring2016/papers/bwtree-icde2013.pdf}.
+
+\bibitem{buzzword_bwtree}
+CMU Database Group.
+\newblock ``Building a Bw-Tree Takes More Than Just Buzz Words.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://db.cs.cmu.edu/papers/2018/mod342-wangA.pdf}.
+
+\bibitem{ub_bwtree_slides}
+University at Buffalo.
+\newblock ``Bw-Tree Presentation Slides.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://cse.buffalo.edu/~zzhao35/teaching/cse707_fall21/l14-bwtree.pptx}.
+
+\bibitem{masstree_notes}
+Paper Trail.
+\newblock ``Masstree: A Cache-friendly Mashup of Tries and B-trees.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://www.the-paper-trail.org/post/masstree-paper-notes/}.
+
+\bibitem{masstree_highscalability}
+High Scalability.
+\newblock ``Masstree: Much Faster than MongoDB, VoltDB, Redis, and Competitive with Memcached.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://highscalability.com/masstree-much-faster-than-mongodb-voltdb-redis-and-competiti/}.
+
+\bibitem{masstree_eurosys}
+MIT PDOS.
+\newblock ``Cache Craftiness for Fast Multicore Key-Value Storage.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://pdos.csail.mit.edu/papers/masstree:eurosys12.pdf}.
+
+\bibitem{smart_osdi}
+USENIX OSDI.
+\newblock ``SMART: A High-Performance Adaptive Radix Tree for Disaggregated Memory.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://www.usenix.org/system/files/osdi23-luo.pdf}.
+
+\bibitem{reddit_art}
+Reddit r/golang.
+\newblock ``How I Implemented an ART Data Structure in Go to Increase DB Performance 2x.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://www.reddit.com/r/golang/comments/ti6f42/how_i_implemented_an_art_adaptive_radix_trie_data/}.
+
+\bibitem{art_semantic}
+Semantic Scholar.
+\newblock ``The ART of Practical Synchronization.''
+\newblock Accessed November 16, 2025.
+\newblock \url{https://www.semanticscholar.org/paper/The-ART-of-practical-synchronization-Leis-Scheibner/5f9d84444231fb6f87f48be9928723a32e23e5ce}.
+\end{thebibliography}
+
+\end{document}
