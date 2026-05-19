@@ -1,0 +1,9 @@
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/caidj_lib.dir
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/caidj.dir
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/RUN_TESTS.dir
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/INSTALL.dir
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/ALL_BUILD.dir
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/tests/CMakeFiles/caidj_tests.dir
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/tests/CMakeFiles/RUN_TESTS.dir
+C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/tests/CMakeFiles/INSTALL.dir

@@ -1,0 +1,4 @@
+protocol,concurrency,run_id,join_latency_ms,throughput_jps,lock_contention_rate,memory_overhead_mb,build_time_ms,probe_count,probe_blocked,write_count,gc_runs,bf_fast_path,bf_false_positive,bf_rebuilds
+ECHI,2,1,253.434,197290,0,2.42254,8.7309,50000,0,2001,0,0,0,0
+ECHI,2,2,116.171,430400,0,2.43131,9.5817,50000,0,2001,0,0,0,0
+ECHI,2,3,94.8178,527327,0,2.43815,13.0033,50000,0,2001,0,0,0,0

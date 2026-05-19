@@ -1,0 +1,1709 @@
+{
+  "version": "1.0.0",
+  "config": {
+  "seed": 42,
+  "zipf_alpha": 1.2,
+  "domain_size": 200000,
+  "r_size": 150000,
+  "s_size": 50000,
+  "num_runs": 3,
+  "trial_duration_ms": 30000,
+  "num_probe_threads": 10,
+  "concurrency_levels": [1, 2, 4, 8, 16],
+  "protocols": ["nhj", "echi", "mpimvcc", "bfcsi"],
+  "output_dir": "results\\full_benchmark",
+  "write_csv": true,
+  "write_json": true,
+  "log_level": "info",
+  "echi_delta_threshold": 1000,
+  "echi_epoch_interval_ms": 100,
+  "mpimvcc_gc_interval_ms": 500,
+  "bfcsi_fpr": 0.01,
+  "bfcsi_rebuild_threshold": 0.2,
+  "bfcsi_num_shards": 16,
+  "bfcsi_fp_cache_capacity": 4096,
+  "insert_fraction": 0.8
+},
+  "results": [
+    {
+      "protocol": "NHJ",
+      "concurrency": 1,
+      "run_id": 1,
+      "join_latency_ms": 219.322,
+      "throughput_jps": 227975,
+      "lock_contention_rate": 0.09422,
+      "memory_overhead_mb": 2.82498,
+      "build_time_ms": 5.4455,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 4711,
+        "write_count": 10709,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2962208
+      },
+      "txn_stats": {
+        "total_writes": 10709,
+        "total_inserts": 8500,
+        "total_deletes": 2209,
+        "write_rate_per_sec": 48695.7
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 1,
+      "run_id": 2,
+      "join_latency_ms": 129.842,
+      "throughput_jps": 385083,
+      "lock_contention_rate": 0.0584,
+      "memory_overhead_mb": 2.70951,
+      "build_time_ms": 4.6184,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 2920,
+        "write_count": 2129,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2841128
+      },
+      "txn_stats": {
+        "total_writes": 2129,
+        "total_inserts": 1709,
+        "total_deletes": 420,
+        "write_rate_per_sec": 16336.1
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 1,
+      "run_id": 3,
+      "join_latency_ms": 101.932,
+      "throughput_jps": 490525,
+      "lock_contention_rate": 0.04792,
+      "memory_overhead_mb": 2.72236,
+      "build_time_ms": 6.1859,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 2396,
+        "write_count": 2433,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2854600
+      },
+      "txn_stats": {
+        "total_writes": 2433,
+        "total_inserts": 1947,
+        "total_deletes": 486,
+        "write_rate_per_sec": 23733.8
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 2,
+      "run_id": 1,
+      "join_latency_ms": 89.7351,
+      "throughput_jps": 557196,
+      "lock_contention_rate": 0.04496,
+      "memory_overhead_mb": 2.71634,
+      "build_time_ms": 4.943,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 2248,
+        "write_count": 4157,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2848288
+      },
+      "txn_stats": {
+        "total_writes": 4157,
+        "total_inserts": 3357,
+        "total_deletes": 800,
+        "write_rate_per_sec": 46007.4
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 2,
+      "run_id": 2,
+      "join_latency_ms": 95.9281,
+      "throughput_jps": 521224,
+      "lock_contention_rate": 0.04946,
+      "memory_overhead_mb": 2.72733,
+      "build_time_ms": 5.5672,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 2473,
+        "write_count": 4201,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2859808
+      },
+      "txn_stats": {
+        "total_writes": 4201,
+        "total_inserts": 3401,
+        "total_deletes": 800,
+        "write_rate_per_sec": 43469.9
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 2,
+      "run_id": 3,
+      "join_latency_ms": 74.2844,
+      "throughput_jps": 673089,
+      "lock_contention_rate": 0.02952,
+      "memory_overhead_mb": 2.72072,
+      "build_time_ms": 5.5293,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 1476,
+        "write_count": 2117,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2852880
+      },
+      "txn_stats": {
+        "total_writes": 2117,
+        "total_inserts": 1725,
+        "total_deletes": 392,
+        "write_rate_per_sec": 28274.8
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 4,
+      "run_id": 1,
+      "join_latency_ms": 106.576,
+      "throughput_jps": 469148,
+      "lock_contention_rate": 0.05982,
+      "memory_overhead_mb": 3.06541,
+      "build_time_ms": 5.4384,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 2991,
+        "write_count": 39079,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3214320
+      },
+      "txn_stats": {
+        "total_writes": 39079,
+        "total_inserts": 31370,
+        "total_deletes": 7709,
+        "write_rate_per_sec": 363859
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 4,
+      "run_id": 2,
+      "join_latency_ms": 119.023,
+      "throughput_jps": 420087,
+      "lock_contention_rate": 0.14742,
+      "memory_overhead_mb": 2.90092,
+      "build_time_ms": 5.5098,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 7371,
+        "write_count": 19733,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3041840
+      },
+      "txn_stats": {
+        "total_writes": 19733,
+        "total_inserts": 15844,
+        "total_deletes": 3889,
+        "write_rate_per_sec": 164336
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 4,
+      "run_id": 3,
+      "join_latency_ms": 139.413,
+      "throughput_jps": 358646,
+      "lock_contention_rate": 0.2176,
+      "memory_overhead_mb": 2.96048,
+      "build_time_ms": 5.4522,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 10880,
+        "write_count": 26220,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3104288
+      },
+      "txn_stats": {
+        "total_writes": 26220,
+        "total_inserts": 21075,
+        "total_deletes": 5145,
+        "write_rate_per_sec": 186955
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 8,
+      "run_id": 1,
+      "join_latency_ms": 309.885,
+      "throughput_jps": 161350,
+      "lock_contention_rate": 0.33894,
+      "memory_overhead_mb": 4.41517,
+      "build_time_ms": 5.1095,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 16947,
+        "write_count": 159719,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 4629640
+      },
+      "txn_stats": {
+        "total_writes": 159719,
+        "total_inserts": 127757,
+        "total_deletes": 31962,
+        "write_rate_per_sec": 512604
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 8,
+      "run_id": 2,
+      "join_latency_ms": 264.585,
+      "throughput_jps": 188975,
+      "lock_contention_rate": 0.33178,
+      "memory_overhead_mb": 4.10953,
+      "build_time_ms": 5.5725,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 16589,
+        "write_count": 122512,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 4309152
+      },
+      "txn_stats": {
+        "total_writes": 122512,
+        "total_inserts": 97990,
+        "total_deletes": 24522,
+        "write_rate_per_sec": 460779
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 8,
+      "run_id": 3,
+      "join_latency_ms": 317.469,
+      "throughput_jps": 157496,
+      "lock_contention_rate": 0.34272,
+      "memory_overhead_mb": 4.63696,
+      "build_time_ms": 5.299,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 17136,
+        "write_count": 178748,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 4862200
+      },
+      "txn_stats": {
+        "total_writes": 178748,
+        "total_inserts": 142941,
+        "total_deletes": 35807,
+        "write_rate_per_sec": 560319
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 16,
+      "run_id": 1,
+      "join_latency_ms": 1604.54,
+      "throughput_jps": 31161.5,
+      "lock_contention_rate": 0.49092,
+      "memory_overhead_mb": 11.6927,
+      "build_time_ms": 5.6274,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 24546,
+        "write_count": 832113,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 12260728
+      },
+      "txn_stats": {
+        "total_writes": 832113,
+        "total_inserts": 665728,
+        "total_deletes": 166385,
+        "write_rate_per_sec": 516170
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 16,
+      "run_id": 2,
+      "join_latency_ms": 1641.86,
+      "throughput_jps": 30453.3,
+      "lock_contention_rate": 0.50232,
+      "memory_overhead_mb": 11.0711,
+      "build_time_ms": 5.8308,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 25116,
+        "write_count": 768535,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 11608920
+      },
+      "txn_stats": {
+        "total_writes": 768535,
+        "total_inserts": 614707,
+        "total_deletes": 153828,
+        "write_rate_per_sec": 467307
+      }
+    },
+    {
+      "protocol": "NHJ",
+      "concurrency": 16,
+      "run_id": 3,
+      "join_latency_ms": 2321.09,
+      "throughput_jps": 21541.6,
+      "lock_contention_rate": 0.15258,
+      "memory_overhead_mb": 17.2037,
+      "build_time_ms": 8.8315,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 7629,
+        "write_count": 1421526,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 18039424
+      },
+      "txn_stats": {
+        "total_writes": 1421526,
+        "total_inserts": 1136905,
+        "total_deletes": 284621,
+        "write_rate_per_sec": 610638
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 1,
+      "run_id": 1,
+      "join_latency_ms": 61.2715,
+      "throughput_jps": 816040,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.82359,
+      "build_time_ms": 5.8203,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2000,
+        "epoch_transitions": 2,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2960752
+      },
+      "txn_stats": {
+        "total_writes": 2000,
+        "total_inserts": 1611,
+        "total_deletes": 389,
+        "write_rate_per_sec": 29392.9
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 1,
+      "run_id": 2,
+      "join_latency_ms": 52.314,
+      "throughput_jps": 955767,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.8215,
+      "build_time_ms": 6.5532,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2000,
+        "epoch_transitions": 2,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2958552
+      },
+      "txn_stats": {
+        "total_writes": 2000,
+        "total_inserts": 1611,
+        "total_deletes": 389,
+        "write_rate_per_sec": 36102.6
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 1,
+      "run_id": 3,
+      "join_latency_ms": 55.8291,
+      "throughput_jps": 895590,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.83267,
+      "build_time_ms": 7.3269,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2000,
+        "epoch_transitions": 2,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2970272
+      },
+      "txn_stats": {
+        "total_writes": 2000,
+        "total_inserts": 1611,
+        "total_deletes": 389,
+        "write_rate_per_sec": 32307.9
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 2,
+      "run_id": 1,
+      "join_latency_ms": 67.7984,
+      "throughput_jps": 737481,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.43391,
+      "build_time_ms": 6.6535,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 3001,
+        "epoch_transitions": 4,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2552144
+      },
+      "txn_stats": {
+        "total_writes": 3001,
+        "total_inserts": 2448,
+        "total_deletes": 553,
+        "write_rate_per_sec": 35411
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 2,
+      "run_id": 2,
+      "join_latency_ms": 110.515,
+      "throughput_jps": 452426,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.84443,
+      "build_time_ms": 8.8748,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 3001,
+        "epoch_transitions": 4,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2982600
+      },
+      "txn_stats": {
+        "total_writes": 3001,
+        "total_inserts": 2441,
+        "total_deletes": 560,
+        "write_rate_per_sec": 22145.6
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 2,
+      "run_id": 3,
+      "join_latency_ms": 109.771,
+      "throughput_jps": 455493,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.43772,
+      "build_time_ms": 15.745,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2001,
+        "epoch_transitions": 4,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2556136
+      },
+      "txn_stats": {
+        "total_writes": 2001,
+        "total_inserts": 1627,
+        "total_deletes": 374,
+        "write_rate_per_sec": 15042.7
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 4,
+      "run_id": 1,
+      "join_latency_ms": 52.6256,
+      "throughput_jps": 950108,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.42279,
+      "build_time_ms": 4.3807,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2003,
+        "epoch_transitions": 5,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2540480
+      },
+      "txn_stats": {
+        "total_writes": 2003,
+        "total_inserts": 1640,
+        "total_deletes": 363,
+        "write_rate_per_sec": 23236.8
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 4,
+      "run_id": 2,
+      "join_latency_ms": 100.06,
+      "throughput_jps": 499700,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.44232,
+      "build_time_ms": 5.4476,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 3003,
+        "epoch_transitions": 6,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2560960
+      },
+      "txn_stats": {
+        "total_writes": 3003,
+        "total_inserts": 2400,
+        "total_deletes": 603,
+        "write_rate_per_sec": 19773.5
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 4,
+      "run_id": 3,
+      "join_latency_ms": 130.555,
+      "throughput_jps": 382982,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.44897,
+      "build_time_ms": 4.2086,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 3005,
+        "epoch_transitions": 8,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2567936
+      },
+      "txn_stats": {
+        "total_writes": 3005,
+        "total_inserts": 2442,
+        "total_deletes": 563,
+        "write_rate_per_sec": 16150.3
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 8,
+      "run_id": 1,
+      "join_latency_ms": 63.3187,
+      "throughput_jps": 789656,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.42258,
+      "build_time_ms": 9.8291,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2007,
+        "epoch_transitions": 9,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2540264
+      },
+      "txn_stats": {
+        "total_writes": 2007,
+        "total_inserts": 1633,
+        "total_deletes": 374,
+        "write_rate_per_sec": 13908.6
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 8,
+      "run_id": 2,
+      "join_latency_ms": 72.782,
+      "throughput_jps": 686983,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.44119,
+      "build_time_ms": 12.7868,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 3007,
+        "epoch_transitions": 10,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2559776
+      },
+      "txn_stats": {
+        "total_writes": 3007,
+        "total_inserts": 2412,
+        "total_deletes": 595,
+        "write_rate_per_sec": 19480.5
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 8,
+      "run_id": 3,
+      "join_latency_ms": 77.2322,
+      "throughput_jps": 647398,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.43827,
+      "build_time_ms": 5.7238,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2007,
+        "epoch_transitions": 9,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2556712
+      },
+      "txn_stats": {
+        "total_writes": 2007,
+        "total_inserts": 1599,
+        "total_deletes": 408,
+        "write_rate_per_sec": 12682.2
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 16,
+      "run_id": 1,
+      "join_latency_ms": 57.0962,
+      "throughput_jps": 875715,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.42271,
+      "build_time_ms": 7.9574,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2015,
+        "epoch_transitions": 17,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2540392
+      },
+      "txn_stats": {
+        "total_writes": 2015,
+        "total_inserts": 1639,
+        "total_deletes": 376,
+        "write_rate_per_sec": 9416.85
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 16,
+      "run_id": 2,
+      "join_latency_ms": 71.1279,
+      "throughput_jps": 702959,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.43163,
+      "build_time_ms": 11.2543,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2015,
+        "epoch_transitions": 17,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2549744
+      },
+      "txn_stats": {
+        "total_writes": 2015,
+        "total_inserts": 1618,
+        "total_deletes": 397,
+        "write_rate_per_sec": 8180.99
+      }
+    },
+    {
+      "protocol": "ECHI",
+      "concurrency": 16,
+      "run_id": 3,
+      "join_latency_ms": 56.1919,
+      "throughput_jps": 889808,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 2.43781,
+      "build_time_ms": 11.6797,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 2015,
+        "epoch_transitions": 17,
+        "gc_runs": 0,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 2556232
+      },
+      "txn_stats": {
+        "total_writes": 2015,
+        "total_inserts": 1639,
+        "total_deletes": 376,
+        "write_rate_per_sec": 7242.18
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 1,
+      "run_id": 1,
+      "join_latency_ms": 7295.52,
+      "throughput_jps": 6853.52,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 4.12065,
+      "build_time_ms": 89.9827,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 779,
+        "epoch_transitions": 0,
+        "gc_runs": 13,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00018,
+        "memory_bytes": 4320816
+      },
+      "txn_stats": {
+        "total_writes": 779,
+        "total_inserts": 629,
+        "total_deletes": 150,
+        "write_rate_per_sec": 106.748
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 1,
+      "run_id": 2,
+      "join_latency_ms": 6528.39,
+      "throughput_jps": 7658.86,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 7.88491,
+      "build_time_ms": 22.0634,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 638,
+        "epoch_transitions": 0,
+        "gc_runs": 12,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00355,
+        "memory_bytes": 8267928
+      },
+      "txn_stats": {
+        "total_writes": 638,
+        "total_inserts": 519,
+        "total_deletes": 119,
+        "write_rate_per_sec": 97.7139
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 1,
+      "run_id": 3,
+      "join_latency_ms": 8037.18,
+      "throughput_jps": 6221.09,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 4.07023,
+      "build_time_ms": 26.8323,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 927,
+        "epoch_transitions": 0,
+        "gc_runs": 15,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.0003,
+        "memory_bytes": 4267944
+      },
+      "txn_stats": {
+        "total_writes": 927,
+        "total_inserts": 747,
+        "total_deletes": 180,
+        "write_rate_per_sec": 115.329
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 2,
+      "run_id": 1,
+      "join_latency_ms": 5130.7,
+      "throughput_jps": 9745.25,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 13.8121,
+      "build_time_ms": 55.7463,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1136,
+        "epoch_transitions": 0,
+        "gc_runs": 9,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.0096,
+        "memory_bytes": 14483080
+      },
+      "txn_stats": {
+        "total_writes": 1136,
+        "total_inserts": 943,
+        "total_deletes": 193,
+        "write_rate_per_sec": 221.283
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 2,
+      "run_id": 2,
+      "join_latency_ms": 2940.8,
+      "throughput_jps": 17002.2,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 9.20891,
+      "build_time_ms": 30.3944,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 759,
+        "epoch_transitions": 0,
+        "gc_runs": 5,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00481,
+        "memory_bytes": 9656240
+      },
+      "txn_stats": {
+        "total_writes": 759,
+        "total_inserts": 632,
+        "total_deletes": 127,
+        "write_rate_per_sec": 257.947
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 2,
+      "run_id": 3,
+      "join_latency_ms": 4322.21,
+      "throughput_jps": 11568.2,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 14.7541,
+      "build_time_ms": 25.8932,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1046,
+        "epoch_transitions": 0,
+        "gc_runs": 8,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00896,
+        "memory_bytes": 15470800
+      },
+      "txn_stats": {
+        "total_writes": 1046,
+        "total_inserts": 865,
+        "total_deletes": 181,
+        "write_rate_per_sec": 241.918
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 4,
+      "run_id": 1,
+      "join_latency_ms": 2845.68,
+      "throughput_jps": 17570.5,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 20.7593,
+      "build_time_ms": 37.1533,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1019,
+        "epoch_transitions": 0,
+        "gc_runs": 5,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.01631,
+        "memory_bytes": 21767712
+      },
+      "txn_stats": {
+        "total_writes": 1019,
+        "total_inserts": 833,
+        "total_deletes": 186,
+        "write_rate_per_sec": 357.652
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 4,
+      "run_id": 2,
+      "join_latency_ms": 2658.43,
+      "throughput_jps": 18808.1,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 4.83786,
+      "build_time_ms": 28.0557,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 466,
+        "epoch_transitions": 0,
+        "gc_runs": 5,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00048,
+        "memory_bytes": 5072864
+      },
+      "txn_stats": {
+        "total_writes": 466,
+        "total_inserts": 374,
+        "total_deletes": 92,
+        "write_rate_per_sec": 174.836
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 4,
+      "run_id": 3,
+      "join_latency_ms": 2904.15,
+      "throughput_jps": 17216.8,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 17.8645,
+      "build_time_ms": 23.9797,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1163,
+        "epoch_transitions": 0,
+        "gc_runs": 5,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.01283,
+        "memory_bytes": 18732256
+      },
+      "txn_stats": {
+        "total_writes": 1163,
+        "total_inserts": 951,
+        "total_deletes": 212,
+        "write_rate_per_sec": 399.84
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 8,
+      "run_id": 1,
+      "join_latency_ms": 2522.56,
+      "throughput_jps": 19821.1,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 15.6675,
+      "build_time_ms": 24.7511,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 717,
+        "epoch_transitions": 0,
+        "gc_runs": 4,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.01101,
+        "memory_bytes": 16428552
+      },
+      "txn_stats": {
+        "total_writes": 717,
+        "total_inserts": 580,
+        "total_deletes": 137,
+        "write_rate_per_sec": 283.328
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 8,
+      "run_id": 2,
+      "join_latency_ms": 2542.1,
+      "throughput_jps": 19668.8,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 21.7623,
+      "build_time_ms": 19.3028,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 750,
+        "epoch_transitions": 0,
+        "gc_runs": 4,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.01593,
+        "memory_bytes": 22819424
+      },
+      "txn_stats": {
+        "total_writes": 750,
+        "total_inserts": 612,
+        "total_deletes": 138,
+        "write_rate_per_sec": 293.523
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 8,
+      "run_id": 3,
+      "join_latency_ms": 2325.03,
+      "throughput_jps": 21505.1,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 14.6944,
+      "build_time_ms": 24.2166,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 756,
+        "epoch_transitions": 0,
+        "gc_runs": 4,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00969,
+        "memory_bytes": 15408224
+      },
+      "txn_stats": {
+        "total_writes": 756,
+        "total_inserts": 620,
+        "total_deletes": 136,
+        "write_rate_per_sec": 323.815
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 16,
+      "run_id": 1,
+      "join_latency_ms": 2448.71,
+      "throughput_jps": 20418.9,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 9.7431,
+      "build_time_ms": 18.2963,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1138,
+        "epoch_transitions": 0,
+        "gc_runs": 4,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00381,
+        "memory_bytes": 10216376
+      },
+      "txn_stats": {
+        "total_writes": 1138,
+        "total_inserts": 933,
+        "total_deletes": 205,
+        "write_rate_per_sec": 461.86
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 16,
+      "run_id": 2,
+      "join_latency_ms": 2646.26,
+      "throughput_jps": 18894.6,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 11.3148,
+      "build_time_ms": 25.62,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 785,
+        "epoch_transitions": 0,
+        "gc_runs": 5,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00415,
+        "memory_bytes": 11864400
+      },
+      "txn_stats": {
+        "total_writes": 785,
+        "total_inserts": 631,
+        "total_deletes": 154,
+        "write_rate_per_sec": 294.91
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 16,
+      "run_id": 3,
+      "join_latency_ms": 2332.34,
+      "throughput_jps": 21437.7,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 13.9145,
+      "build_time_ms": 17.6413,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 757,
+        "epoch_transitions": 0,
+        "gc_runs": 4,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00718,
+        "memory_bytes": 14590456
+      },
+      "txn_stats": {
+        "total_writes": 757,
+        "total_inserts": 610,
+        "total_deletes": 147,
+        "write_rate_per_sec": 322.263
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 1,
+      "run_id": 1,
+      "join_latency_ms": 104.568,
+      "throughput_jps": 478157,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.12975,
+      "build_time_ms": 63.5343,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 592,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3945,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3281776
+      },
+      "txn_stats": {
+        "total_writes": 592,
+        "total_inserts": 485,
+        "total_deletes": 107,
+        "write_rate_per_sec": 5630.04
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 1,
+      "run_id": 2,
+      "join_latency_ms": 93.9237,
+      "throughput_jps": 532347,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.13975,
+      "build_time_ms": 61.5426,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 248,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3924,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3292264
+      },
+      "txn_stats": {
+        "total_writes": 248,
+        "total_inserts": 206,
+        "total_deletes": 42,
+        "write_rate_per_sec": 2622.28
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 1,
+      "run_id": 3,
+      "join_latency_ms": 95.3342,
+      "throughput_jps": 524471,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.1643,
+      "build_time_ms": 61.4041,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1077,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3819,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3318008
+      },
+      "txn_stats": {
+        "total_writes": 1077,
+        "total_inserts": 862,
+        "total_deletes": 215,
+        "write_rate_per_sec": 11223.2
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 2,
+      "run_id": 1,
+      "join_latency_ms": 130.457,
+      "throughput_jps": 383268,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.13375,
+      "build_time_ms": 60.1401,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1077,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3945,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3285976
+      },
+      "txn_stats": {
+        "total_writes": 1077,
+        "total_inserts": 895,
+        "total_deletes": 182,
+        "write_rate_per_sec": 8214.27
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 2,
+      "run_id": 2,
+      "join_latency_ms": 122.187,
+      "throughput_jps": 409207,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.16004,
+      "build_time_ms": 57.3653,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1285,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3923,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3313544
+      },
+      "txn_stats": {
+        "total_writes": 1285,
+        "total_inserts": 1063,
+        "total_deletes": 222,
+        "write_rate_per_sec": 10450.4
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 2,
+      "run_id": 3,
+      "join_latency_ms": 94.0877,
+      "throughput_jps": 531419,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.1651,
+      "build_time_ms": 62.7016,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 990,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3819,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3318848
+      },
+      "txn_stats": {
+        "total_writes": 990,
+        "total_inserts": 820,
+        "total_deletes": 170,
+        "write_rate_per_sec": 10439.6
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 4,
+      "run_id": 1,
+      "join_latency_ms": 132.545,
+      "throughput_jps": 377230,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.34523,
+      "build_time_ms": 56.1399,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 17014,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3917,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3507728
+      },
+      "txn_stats": {
+        "total_writes": 17014,
+        "total_inserts": 13660,
+        "total_deletes": 3354,
+        "write_rate_per_sec": 127188
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 4,
+      "run_id": 2,
+      "join_latency_ms": 139.177,
+      "throughput_jps": 359256,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.34104,
+      "build_time_ms": 59.066,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 15938,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3835,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3503336
+      },
+      "txn_stats": {
+        "total_writes": 15938,
+        "total_inserts": 12814,
+        "total_deletes": 3124,
+        "write_rate_per_sec": 113654
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 4,
+      "run_id": 3,
+      "join_latency_ms": 161.378,
+      "throughput_jps": 309832,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.24677,
+      "build_time_ms": 54.7685,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 6240,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3818,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3404480
+      },
+      "txn_stats": {
+        "total_writes": 6240,
+        "total_inserts": 5046,
+        "total_deletes": 1194,
+        "write_rate_per_sec": 38394.8
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 8,
+      "run_id": 1,
+      "join_latency_ms": 324.792,
+      "throughput_jps": 153944,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.65769,
+      "build_time_ms": 59.782,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 49086,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3779,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3835368
+      },
+      "txn_stats": {
+        "total_writes": 49086,
+        "total_inserts": 39305,
+        "total_deletes": 9781,
+        "write_rate_per_sec": 150436
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 8,
+      "run_id": 2,
+      "join_latency_ms": 145.339,
+      "throughput_jps": 344024,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.43452,
+      "build_time_ms": 59.552,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 25624,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3898,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3601352
+      },
+      "txn_stats": {
+        "total_writes": 25624,
+        "total_inserts": 20520,
+        "total_deletes": 5104,
+        "write_rate_per_sec": 174027
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 8,
+      "run_id": 3,
+      "join_latency_ms": 349.744,
+      "throughput_jps": 142962,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.82484,
+      "build_time_ms": 56.994,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 61810,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3577,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 4010632
+      },
+      "txn_stats": {
+        "total_writes": 61810,
+        "total_inserts": 49473,
+        "total_deletes": 12337,
+        "write_rate_per_sec": 174975
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 16,
+      "run_id": 1,
+      "join_latency_ms": 656.312,
+      "throughput_jps": 76183.3,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 4.62962,
+      "build_time_ms": 64.3615,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 116663,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3580,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 4854512
+      },
+      "txn_stats": {
+        "total_writes": 116663,
+        "total_inserts": 93354,
+        "total_deletes": 23309,
+        "write_rate_per_sec": 172569
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 16,
+      "run_id": 2,
+      "join_latency_ms": 716.854,
+      "throughput_jps": 69749.2,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 4.64839,
+      "build_time_ms": 99.1776,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 120177,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3557,
+        "bf_false_positive": 1,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 4874192
+      },
+      "txn_stats": {
+        "total_writes": 120177,
+        "total_inserts": 96075,
+        "total_deletes": 24102,
+        "write_rate_per_sec": 165788
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 16,
+      "run_id": 3,
+      "join_latency_ms": 662.627,
+      "throughput_jps": 75457.2,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 4.54646,
+      "build_time_ms": 67.4391,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 108789,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3494,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 4767312
+      },
+      "txn_stats": {
+        "total_writes": 108789,
+        "total_inserts": 86981,
+        "total_deletes": 21808,
+        "write_rate_per_sec": 163298
+      }
+    }
+  ]
+}

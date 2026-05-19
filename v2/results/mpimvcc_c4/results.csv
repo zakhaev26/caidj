@@ -1,0 +1,4 @@
+protocol,concurrency,run_id,join_latency_ms,throughput_jps,lock_contention_rate,memory_overhead_mb,build_time_ms,probe_count,probe_blocked,write_count,gc_runs,bf_fast_path,bf_false_positive,bf_rebuilds
+MPI-MVCC,4,1,6412.76,7796.95,0,23.1706,78.5961,50000,0,1898,11,0,0,0
+MPI-MVCC,4,2,13230.2,3779.23,0,20.7453,70.0945,50000,0,3842,22,0,0,0
+MPI-MVCC,4,3,3793.95,13178.9,0,5.03748,80.7948,50000,0,364,7,0,0,0

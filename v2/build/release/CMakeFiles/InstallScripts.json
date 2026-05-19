@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/cmake_install.cmake",
+		"C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

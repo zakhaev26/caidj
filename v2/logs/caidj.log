@@ -1,0 +1,402 @@
+[12:34:54] [info] [main] CAIDJ v1.0.0 starting
+[12:34:54] [info] [bench] Starting run NHJ concurrency 1 run 1
+[12:34:54] [info] [bench] Trial complete latency_ms 3.8889 throughput_jps 12857.1
+[12:36:33] [info] [main] CAIDJ v1.0.0 starting
+[12:36:33] [info] [bench] Starting run NHJ concurrency 1 run 1
+[12:36:33] [info] [bench] Trial complete latency_ms 7.9376 throughput_jps 6299.13
+[13:10:23] [info] [main] CAIDJ v1.0.0 starting
+[13:10:23] [info] [bench] Starting run MPI-MVCC concurrency 1 run 1
+[13:10:56] [info] [bench] Trial complete latency_ms 31449.7 throughput_jps 1589.84
+[13:10:56] [info] [bench] Starting run MPI-MVCC concurrency 1 run 2
+[13:11:20] [info] [bench] Trial complete latency_ms 23306.4 throughput_jps 2145.33
+[13:11:21] [info] [bench] Starting run MPI-MVCC concurrency 1 run 3
+[13:11:55] [info] [bench] Trial complete latency_ms 32957.2 throughput_jps 1517.12
+[13:25:44] [info] [main] CAIDJ v1.0.0 starting
+[13:25:44] [info] [bench] Starting run MPI-MVCC concurrency 80 run 1
+[13:26:17] [info] [bench] Trial complete latency_ms 32170.9 throughput_jps 1554.2
+[13:26:18] [info] [bench] Starting run MPI-MVCC concurrency 80 run 2
+[13:26:50] [info] [bench] Trial complete latency_ms 29457.6 throughput_jps 1697.35
+[13:26:51] [info] [bench] Starting run MPI-MVCC concurrency 80 run 3
+[13:27:49] [info] [bench] Trial complete latency_ms 57123.9 throughput_jps 875.29
+[16:04:34] [info] [main] CAIDJ v1.0.0 starting
+[16:04:34] [info] [bench] Starting run NHJ concurrency 1 run 1
+[16:04:34] [info] [bench] Trial complete latency_ms 219.322 throughput_jps 227975
+[16:04:34] [info] [bench] Starting run NHJ concurrency 1 run 2
+[16:04:34] [info] [bench] Trial complete latency_ms 129.842 throughput_jps 385083
+[16:04:34] [info] [bench] Starting run NHJ concurrency 1 run 3
+[16:04:34] [info] [bench] Trial complete latency_ms 101.932 throughput_jps 490525
+[16:04:34] [info] [bench] Starting run NHJ concurrency 2 run 1
+[16:04:34] [info] [bench] Trial complete latency_ms 89.7351 throughput_jps 557196
+[16:04:34] [info] [bench] Starting run NHJ concurrency 2 run 2
+[16:04:34] [info] [bench] Trial complete latency_ms 95.9281 throughput_jps 521224
+[16:04:34] [info] [bench] Starting run NHJ concurrency 2 run 3
+[16:04:35] [info] [bench] Trial complete latency_ms 74.2844 throughput_jps 673089
+[16:04:35] [info] [bench] Starting run NHJ concurrency 4 run 1
+[16:04:35] [info] [bench] Trial complete latency_ms 106.576 throughput_jps 469148
+[16:04:35] [info] [bench] Starting run NHJ concurrency 4 run 2
+[16:04:35] [info] [bench] Trial complete latency_ms 119.023 throughput_jps 420087
+[16:04:35] [info] [bench] Starting run NHJ concurrency 4 run 3
+[16:04:35] [info] [bench] Trial complete latency_ms 139.413 throughput_jps 358646
+[16:04:35] [info] [bench] Starting run NHJ concurrency 8 run 1
+[16:04:35] [info] [bench] Trial complete latency_ms 309.885 throughput_jps 161350
+[16:04:35] [info] [bench] Starting run NHJ concurrency 8 run 2
+[16:04:36] [info] [bench] Trial complete latency_ms 264.585 throughput_jps 188975
+[16:04:36] [info] [bench] Starting run NHJ concurrency 8 run 3
+[16:04:36] [info] [bench] Trial complete latency_ms 317.469 throughput_jps 157496
+[16:04:36] [info] [bench] Starting run NHJ concurrency 16 run 1
+[16:04:38] [info] [bench] Trial complete latency_ms 1604.54 throughput_jps 31161.5
+[16:04:38] [info] [bench] Starting run NHJ concurrency 16 run 2
+[16:04:39] [info] [bench] Trial complete latency_ms 1641.86 throughput_jps 30453.3
+[16:04:39] [info] [bench] Starting run NHJ concurrency 16 run 3
+[16:04:42] [info] [bench] Trial complete latency_ms 2321.09 throughput_jps 21541.6
+[16:04:42] [info] [bench] Starting run ECHI concurrency 1 run 1
+[16:04:42] [info] [bench] Trial complete latency_ms 61.2715 throughput_jps 816040
+[16:04:42] [info] [bench] Starting run ECHI concurrency 1 run 2
+[16:04:42] [info] [bench] Trial complete latency_ms 52.314 throughput_jps 955767
+[16:04:42] [info] [bench] Starting run ECHI concurrency 1 run 3
+[16:04:42] [info] [bench] Trial complete latency_ms 55.8291 throughput_jps 895590
+[16:04:42] [info] [bench] Starting run ECHI concurrency 2 run 1
+[16:04:42] [info] [bench] Trial complete latency_ms 67.7984 throughput_jps 737481
+[16:04:42] [info] [bench] Starting run ECHI concurrency 2 run 2
+[16:04:42] [info] [bench] Trial complete latency_ms 110.515 throughput_jps 452426
+[16:04:42] [info] [bench] Starting run ECHI concurrency 2 run 3
+[16:04:43] [info] [bench] Trial complete latency_ms 109.771 throughput_jps 455493
+[16:04:43] [info] [bench] Starting run ECHI concurrency 4 run 1
+[16:04:43] [info] [bench] Trial complete latency_ms 52.6256 throughput_jps 950108
+[16:04:43] [info] [bench] Starting run ECHI concurrency 4 run 2
+[16:04:43] [info] [bench] Trial complete latency_ms 100.06 throughput_jps 499700
+[16:04:43] [info] [bench] Starting run ECHI concurrency 4 run 3
+[16:04:43] [info] [bench] Trial complete latency_ms 130.555 throughput_jps 382982
+[16:04:43] [info] [bench] Starting run ECHI concurrency 8 run 1
+[16:04:44] [info] [bench] Trial complete latency_ms 63.3187 throughput_jps 789656
+[16:04:44] [info] [bench] Starting run ECHI concurrency 8 run 2
+[16:04:44] [info] [bench] Trial complete latency_ms 72.782 throughput_jps 686983
+[16:04:44] [info] [bench] Starting run ECHI concurrency 8 run 3
+[16:04:44] [info] [bench] Trial complete latency_ms 77.2322 throughput_jps 647398
+[16:04:44] [info] [bench] Starting run ECHI concurrency 16 run 1
+[16:04:44] [info] [bench] Trial complete latency_ms 57.0962 throughput_jps 875715
+[16:04:44] [info] [bench] Starting run ECHI concurrency 16 run 2
+[16:04:45] [info] [bench] Trial complete latency_ms 71.1279 throughput_jps 702959
+[16:04:45] [info] [bench] Starting run ECHI concurrency 16 run 3
+[16:04:45] [info] [bench] Trial complete latency_ms 56.1919 throughput_jps 889808
+[16:04:45] [info] [bench] Starting run MPI-MVCC concurrency 1 run 1
+[16:04:52] [info] [bench] Trial complete latency_ms 7295.52 throughput_jps 6853.52
+[16:04:52] [info] [bench] Starting run MPI-MVCC concurrency 1 run 2
+[16:04:59] [info] [bench] Trial complete latency_ms 6528.39 throughput_jps 7658.86
+[16:04:59] [info] [bench] Starting run MPI-MVCC concurrency 1 run 3
+[16:05:07] [info] [bench] Trial complete latency_ms 8037.18 throughput_jps 6221.09
+[16:05:08] [info] [bench] Starting run MPI-MVCC concurrency 2 run 1
+[16:05:13] [info] [bench] Trial complete latency_ms 5130.7 throughput_jps 9745.25
+[16:05:13] [info] [bench] Starting run MPI-MVCC concurrency 2 run 2
+[16:05:16] [info] [bench] Trial complete latency_ms 2940.8 throughput_jps 17002.2
+[16:05:17] [info] [bench] Starting run MPI-MVCC concurrency 2 run 3
+[16:05:21] [info] [bench] Trial complete latency_ms 4322.21 throughput_jps 11568.2
+[16:05:21] [info] [bench] Starting run MPI-MVCC concurrency 4 run 1
+[16:05:24] [info] [bench] Trial complete latency_ms 2845.68 throughput_jps 17570.5
+[16:05:25] [info] [bench] Starting run MPI-MVCC concurrency 4 run 2
+[16:05:27] [info] [bench] Trial complete latency_ms 2658.43 throughput_jps 18808.1
+[16:05:28] [info] [bench] Starting run MPI-MVCC concurrency 4 run 3
+[16:05:31] [info] [bench] Trial complete latency_ms 2904.15 throughput_jps 17216.8
+[16:05:31] [info] [bench] Starting run MPI-MVCC concurrency 8 run 1
+[16:05:34] [info] [bench] Trial complete latency_ms 2522.56 throughput_jps 19821.1
+[16:05:34] [info] [bench] Starting run MPI-MVCC concurrency 8 run 2
+[16:05:36] [info] [bench] Trial complete latency_ms 2542.1 throughput_jps 19668.8
+[16:05:37] [info] [bench] Starting run MPI-MVCC concurrency 8 run 3
+[16:05:39] [info] [bench] Trial complete latency_ms 2325.03 throughput_jps 21505.1
+[16:05:39] [info] [bench] Starting run MPI-MVCC concurrency 16 run 1
+[16:05:42] [info] [bench] Trial complete latency_ms 2448.71 throughput_jps 20418.9
+[16:05:42] [info] [bench] Starting run MPI-MVCC concurrency 16 run 2
+[16:05:45] [info] [bench] Trial complete latency_ms 2646.26 throughput_jps 18894.6
+[16:05:45] [info] [bench] Starting run MPI-MVCC concurrency 16 run 3
+[16:05:48] [info] [bench] Trial complete latency_ms 2332.34 throughput_jps 21437.7
+[16:05:48] [info] [bench] Starting run BF-CSI concurrency 1 run 1
+[16:05:48] [info] [bench] Trial complete latency_ms 104.568 throughput_jps 478157
+[16:05:48] [info] [bench] Starting run BF-CSI concurrency 1 run 2
+[16:05:48] [info] [bench] Trial complete latency_ms 93.9237 throughput_jps 532347
+[16:05:48] [info] [bench] Starting run BF-CSI concurrency 1 run 3
+[16:05:48] [info] [bench] Trial complete latency_ms 95.3342 throughput_jps 524471
+[16:05:48] [info] [bench] Starting run BF-CSI concurrency 2 run 1
+[16:05:49] [info] [bench] Trial complete latency_ms 130.457 throughput_jps 383268
+[16:05:49] [info] [bench] Starting run BF-CSI concurrency 2 run 2
+[16:05:49] [info] [bench] Trial complete latency_ms 122.187 throughput_jps 409207
+[16:05:49] [info] [bench] Starting run BF-CSI concurrency 2 run 3
+[16:05:49] [info] [bench] Trial complete latency_ms 94.0877 throughput_jps 531419
+[16:05:49] [info] [bench] Starting run BF-CSI concurrency 4 run 1
+[16:05:49] [info] [bench] Trial complete latency_ms 132.545 throughput_jps 377230
+[16:05:49] [info] [bench] Starting run BF-CSI concurrency 4 run 2
+[16:05:49] [info] [bench] Trial complete latency_ms 139.177 throughput_jps 359256
+[16:05:49] [info] [bench] Starting run BF-CSI concurrency 4 run 3
+[16:05:50] [info] [bench] Trial complete latency_ms 161.378 throughput_jps 309832
+[16:05:50] [info] [bench] Starting run BF-CSI concurrency 8 run 1
+[16:05:50] [info] [bench] Trial complete latency_ms 324.792 throughput_jps 153944
+[16:05:50] [info] [bench] Starting run BF-CSI concurrency 8 run 2
+[16:05:50] [info] [bench] Trial complete latency_ms 145.339 throughput_jps 344024
+[16:05:50] [info] [bench] Starting run BF-CSI concurrency 8 run 3
+[16:05:51] [info] [bench] Trial complete latency_ms 349.744 throughput_jps 142962
+[16:05:51] [info] [bench] Starting run BF-CSI concurrency 16 run 1
+[16:05:51] [info] [bench] Trial complete latency_ms 656.312 throughput_jps 76183.3
+[16:05:51] [info] [bench] Starting run BF-CSI concurrency 16 run 2
+[16:05:52] [info] [bench] Trial complete latency_ms 716.854 throughput_jps 69749.2
+[16:05:52] [info] [bench] Starting run BF-CSI concurrency 16 run 3
+[16:05:53] [info] [bench] Trial complete latency_ms 662.627 throughput_jps 75457.2
+[17:18:51] [info] [main] CAIDJ v1.0.0 starting
+[17:18:51] [info] [bench] Starting run NHJ concurrency 1 run 1
+[17:18:51] [info] [bench] Trial complete latency_ms 274.516 throughput_jps 182138
+[17:18:51] [info] [bench] Starting run NHJ concurrency 1 run 2
+[17:18:51] [info] [bench] Trial complete latency_ms 208.166 throughput_jps 240193
+[17:18:51] [info] [bench] Starting run NHJ concurrency 1 run 3
+[17:18:51] [info] [bench] Trial complete latency_ms 162.029 throughput_jps 308587
+[17:18:51] [info] [main] CAIDJ v1.0.0 starting
+[17:18:51] [info] [bench] Starting run ECHI concurrency 1 run 1
+[17:18:52] [info] [bench] Trial complete latency_ms 235.311 throughput_jps 212485
+[17:18:52] [info] [bench] Starting run ECHI concurrency 1 run 2
+[17:18:52] [info] [bench] Trial complete latency_ms 103.126 throughput_jps 484844
+[17:18:52] [info] [bench] Starting run ECHI concurrency 1 run 3
+[17:18:52] [info] [bench] Trial complete latency_ms 77.9463 throughput_jps 641467
+[17:18:52] [info] [main] CAIDJ v1.0.0 starting
+[17:18:52] [info] [bench] Starting run MPI-MVCC concurrency 1 run 1
+[17:19:01] [info] [bench] Trial complete latency_ms 8407.94 throughput_jps 5946.76
+[17:19:01] [info] [bench] Starting run MPI-MVCC concurrency 1 run 2
+[17:19:06] [info] [bench] Trial complete latency_ms 4975.34 throughput_jps 10049.6
+[17:19:06] [info] [bench] Starting run MPI-MVCC concurrency 1 run 3
+[17:19:16] [info] [bench] Trial complete latency_ms 9887.11 throughput_jps 5057.09
+[17:19:16] [info] [main] CAIDJ v1.0.0 starting
+[17:19:16] [info] [bench] Starting run BF-CSI concurrency 1 run 1
+[17:19:17] [info] [bench] Trial complete latency_ms 314.837 throughput_jps 158812
+[17:19:17] [info] [bench] Starting run BF-CSI concurrency 1 run 2
+[17:19:17] [info] [bench] Trial complete latency_ms 158.726 throughput_jps 315008
+[17:19:17] [info] [bench] Starting run BF-CSI concurrency 1 run 3
+[17:19:18] [info] [bench] Trial complete latency_ms 220.502 throughput_jps 226755
+[17:19:18] [info] [main] CAIDJ v1.0.0 starting
+[17:19:18] [info] [bench] Starting run NHJ concurrency 2 run 1
+[17:19:18] [info] [bench] Trial complete latency_ms 468.152 throughput_jps 106803
+[17:19:18] [info] [bench] Starting run NHJ concurrency 2 run 2
+[17:19:18] [info] [bench] Trial complete latency_ms 242.736 throughput_jps 205986
+[17:19:18] [info] [bench] Starting run NHJ concurrency 2 run 3
+[17:19:19] [info] [bench] Trial complete latency_ms 269.971 throughput_jps 185205
+[17:19:19] [info] [main] CAIDJ v1.0.0 starting
+[17:19:19] [info] [bench] Starting run ECHI concurrency 2 run 1
+[17:19:19] [info] [bench] Trial complete latency_ms 253.434 throughput_jps 197290
+[17:19:19] [info] [bench] Starting run ECHI concurrency 2 run 2
+[17:19:19] [info] [bench] Trial complete latency_ms 116.171 throughput_jps 430400
+[17:19:19] [info] [bench] Starting run ECHI concurrency 2 run 3
+[17:19:20] [info] [bench] Trial complete latency_ms 94.8178 throughput_jps 527327
+[17:19:20] [info] [main] CAIDJ v1.0.0 starting
+[17:19:20] [info] [bench] Starting run MPI-MVCC concurrency 2 run 1
+[17:19:25] [info] [bench] Trial complete latency_ms 5405.84 throughput_jps 9249.26
+[17:19:25] [info] [bench] Starting run MPI-MVCC concurrency 2 run 2
+[17:19:29] [info] [bench] Trial complete latency_ms 3198.32 throughput_jps 15633.2
+[17:19:29] [info] [bench] Starting run MPI-MVCC concurrency 2 run 3
+[17:19:36] [info] [bench] Trial complete latency_ms 7032.41 throughput_jps 7109.93
+[17:19:37] [info] [main] CAIDJ v1.0.0 starting
+[17:19:37] [info] [bench] Starting run BF-CSI concurrency 2 run 1
+[17:19:37] [info] [bench] Trial complete latency_ms 357.878 throughput_jps 139712
+[17:19:37] [info] [bench] Starting run BF-CSI concurrency 2 run 2
+[17:19:38] [info] [bench] Trial complete latency_ms 249.879 throughput_jps 200097
+[17:19:38] [info] [bench] Starting run BF-CSI concurrency 2 run 3
+[17:19:38] [info] [bench] Trial complete latency_ms 163.677 throughput_jps 305479
+[17:19:38] [info] [main] CAIDJ v1.0.0 starting
+[17:19:38] [info] [bench] Starting run NHJ concurrency 4 run 1
+[17:19:39] [info] [bench] Trial complete latency_ms 594.289 throughput_jps 84134.1
+[17:19:39] [info] [bench] Starting run NHJ concurrency 4 run 2
+[17:19:39] [info] [bench] Trial complete latency_ms 305.4 throughput_jps 163720
+[17:19:39] [info] [bench] Starting run NHJ concurrency 4 run 3
+[17:19:39] [info] [bench] Trial complete latency_ms 235.213 throughput_jps 212573
+[17:19:40] [info] [main] CAIDJ v1.0.0 starting
+[17:19:40] [info] [bench] Starting run ECHI concurrency 4 run 1
+[17:19:40] [info] [bench] Trial complete latency_ms 205.271 throughput_jps 243580
+[17:19:40] [info] [bench] Starting run ECHI concurrency 4 run 2
+[17:19:40] [info] [bench] Trial complete latency_ms 106.052 throughput_jps 471465
+[17:19:40] [info] [bench] Starting run ECHI concurrency 4 run 3
+[17:19:40] [info] [bench] Trial complete latency_ms 87.5834 throughput_jps 570884
+[17:19:41] [info] [main] CAIDJ v1.0.0 starting
+[17:19:41] [info] [bench] Starting run MPI-MVCC concurrency 4 run 1
+[17:19:47] [info] [bench] Trial complete latency_ms 6412.76 throughput_jps 7796.95
+[17:19:47] [info] [bench] Starting run MPI-MVCC concurrency 4 run 2
+[17:20:01] [info] [bench] Trial complete latency_ms 13230.2 throughput_jps 3779.23
+[17:20:01] [info] [bench] Starting run MPI-MVCC concurrency 4 run 3
+[17:20:05] [info] [bench] Trial complete latency_ms 3793.95 throughput_jps 13178.9
+[17:20:06] [info] [main] CAIDJ v1.0.0 starting
+[17:20:06] [info] [bench] Starting run BF-CSI concurrency 4 run 1
+[17:20:06] [info] [bench] Trial complete latency_ms 363.298 throughput_jps 137628
+[17:20:06] [info] [bench] Starting run BF-CSI concurrency 4 run 2
+[17:20:07] [info] [bench] Trial complete latency_ms 284.875 throughput_jps 175515
+[17:20:07] [info] [bench] Starting run BF-CSI concurrency 4 run 3
+[17:20:07] [info] [bench] Trial complete latency_ms 231.825 throughput_jps 215680
+[17:20:07] [info] [main] CAIDJ v1.0.0 starting
+[17:20:07] [info] [bench] Starting run NHJ concurrency 8 run 1
+[17:20:08] [info] [bench] Trial complete latency_ms 781.088 throughput_jps 64013.3
+[17:20:08] [info] [bench] Starting run NHJ concurrency 8 run 2
+[17:20:09] [info] [bench] Trial complete latency_ms 495.588 throughput_jps 100890
+[17:20:09] [info] [bench] Starting run NHJ concurrency 8 run 3
+[17:20:09] [info] [bench] Trial complete latency_ms 364.063 throughput_jps 137339
+[17:20:09] [info] [main] CAIDJ v1.0.0 starting
+[17:20:09] [info] [bench] Starting run ECHI concurrency 8 run 1
+[17:20:10] [info] [bench] Trial complete latency_ms 227.696 throughput_jps 219591
+[17:20:10] [info] [bench] Starting run ECHI concurrency 8 run 2
+[17:20:10] [info] [bench] Trial complete latency_ms 96.8152 throughput_jps 516448
+[17:20:10] [info] [bench] Starting run ECHI concurrency 8 run 3
+[17:20:10] [info] [bench] Trial complete latency_ms 96.528 throughput_jps 517984
+[17:20:10] [info] [main] CAIDJ v1.0.0 starting
+[17:20:10] [info] [bench] Starting run MPI-MVCC concurrency 8 run 1
+[17:20:14] [info] [bench] Trial complete latency_ms 3594.16 throughput_jps 13911.4
+[17:20:14] [info] [bench] Starting run MPI-MVCC concurrency 8 run 2
+[17:20:17] [info] [bench] Trial complete latency_ms 3017.63 throughput_jps 16569.3
+[17:20:17] [info] [bench] Starting run MPI-MVCC concurrency 8 run 3
+[17:20:21] [info] [bench] Trial complete latency_ms 3586.61 throughput_jps 13940.7
+[17:20:21] [info] [main] CAIDJ v1.0.0 starting
+[17:20:21] [info] [bench] Starting run BF-CSI concurrency 8 run 1
+[17:20:22] [info] [bench] Trial complete latency_ms 464.52 throughput_jps 107638
+[17:20:22] [info] [bench] Starting run BF-CSI concurrency 8 run 2
+[17:20:22] [info] [bench] Trial complete latency_ms 531.847 throughput_jps 94011.9
+[17:20:22] [info] [bench] Starting run BF-CSI concurrency 8 run 3
+[17:20:23] [info] [bench] Trial complete latency_ms 364.741 throughput_jps 137084
+[17:20:23] [info] [main] CAIDJ v1.0.0 starting
+[17:20:23] [info] [bench] Starting run NHJ concurrency 16 run 1
+[17:20:29] [info] [bench] Trial complete latency_ms 6098.25 throughput_jps 8199.07
+[17:20:29] [info] [bench] Starting run NHJ concurrency 16 run 2
+[17:20:32] [info] [bench] Trial complete latency_ms 2991.4 throughput_jps 16714.6
+[17:20:32] [info] [bench] Starting run NHJ concurrency 16 run 3
+[17:20:38] [info] [bench] Trial complete latency_ms 5562.6 throughput_jps 8988.61
+[17:20:38] [info] [main] CAIDJ v1.0.0 starting
+[17:20:38] [info] [bench] Starting run ECHI concurrency 16 run 1
+[17:20:39] [info] [bench] Trial complete latency_ms 189.048 throughput_jps 264483
+[17:20:39] [info] [bench] Starting run ECHI concurrency 16 run 2
+[17:20:39] [info] [bench] Trial complete latency_ms 270.267 throughput_jps 185002
+[17:20:39] [info] [bench] Starting run ECHI concurrency 16 run 3
+[17:20:40] [info] [bench] Trial complete latency_ms 109.724 throughput_jps 455688
+[17:20:40] [info] [main] CAIDJ v1.0.0 starting
+[17:20:40] [info] [bench] Starting run MPI-MVCC concurrency 16 run 1
+[17:20:44] [info] [bench] Trial complete latency_ms 3863.32 throughput_jps 12942.2
+[17:20:44] [info] [bench] Starting run MPI-MVCC concurrency 16 run 2
+[17:20:47] [info] [bench] Trial complete latency_ms 3081.45 throughput_jps 16226.1
+[17:20:47] [info] [bench] Starting run MPI-MVCC concurrency 16 run 3
+[17:20:50] [info] [bench] Trial complete latency_ms 2816.68 throughput_jps 17751.4
+[17:20:51] [info] [main] CAIDJ v1.0.0 starting
+[17:20:51] [info] [bench] Starting run BF-CSI concurrency 16 run 1
+[17:20:52] [info] [bench] Trial complete latency_ms 1208.13 throughput_jps 41386.4
+[17:20:52] [info] [bench] Starting run BF-CSI concurrency 16 run 2
+[17:20:53] [info] [bench] Trial complete latency_ms 682.476 throughput_jps 73262.6
+[17:20:53] [info] [bench] Starting run BF-CSI concurrency 16 run 3
+[17:20:54] [info] [bench] Trial complete latency_ms 1023.12 throughput_jps 48870
+[19:03:39] [info] [main] CAIDJ v1.0.0 starting
+[19:03:39] [info] [bench] Starting run NHJ concurrency 1 run 1
+[19:03:40] [info] [bench] Trial complete latency_ms 736.966 throughput_jps 67845.7
+[19:03:40] [info] [bench] Starting run NHJ concurrency 1 run 2
+[19:03:40] [info] [bench] Trial complete latency_ms 602.692 throughput_jps 82961.2
+[19:03:40] [info] [bench] Starting run NHJ concurrency 1 run 3
+[19:03:41] [info] [bench] Trial complete latency_ms 559.876 throughput_jps 89305.5
+[19:03:41] [info] [bench] Starting run NHJ concurrency 2 run 1
+[19:03:42] [info] [bench] Trial complete latency_ms 547.115 throughput_jps 91388.4
+[19:03:42] [info] [bench] Starting run NHJ concurrency 2 run 2
+[19:03:43] [info] [bench] Trial complete latency_ms 623.361 throughput_jps 80210.3
+[19:03:43] [info] [bench] Starting run NHJ concurrency 2 run 3
+[19:03:44] [info] [bench] Trial complete latency_ms 589.049 throughput_jps 84882.6
+[19:03:44] [info] [bench] Starting run NHJ concurrency 4 run 1
+[19:03:45] [info] [bench] Trial complete latency_ms 512.967 throughput_jps 97472.2
+[19:03:45] [info] [bench] Starting run NHJ concurrency 4 run 2
+[19:03:45] [info] [bench] Trial complete latency_ms 520.655 throughput_jps 96032.9
+[19:03:45] [info] [bench] Starting run NHJ concurrency 4 run 3
+[19:03:46] [info] [bench] Trial complete latency_ms 508.656 throughput_jps 98298.2
+[19:03:46] [info] [bench] Starting run NHJ concurrency 8 run 1
+[19:03:47] [info] [bench] Trial complete latency_ms 703.109 throughput_jps 71112.7
+[19:03:47] [info] [bench] Starting run NHJ concurrency 8 run 2
+[19:03:48] [info] [bench] Trial complete latency_ms 717.211 throughput_jps 69714.5
+[19:03:48] [info] [bench] Starting run NHJ concurrency 8 run 3
+[19:03:49] [info] [bench] Trial complete latency_ms 681.797 throughput_jps 73335.6
+[19:03:49] [info] [bench] Starting run NHJ concurrency 16 run 1
+[19:03:51] [info] [bench] Trial complete latency_ms 1603.94 throughput_jps 31173.2
+[19:03:51] [info] [bench] Starting run NHJ concurrency 16 run 2
+[19:03:53] [info] [bench] Trial complete latency_ms 1658.73 throughput_jps 30143.5
+[19:03:53] [info] [bench] Starting run NHJ concurrency 16 run 3
+[19:03:55] [info] [bench] Trial complete latency_ms 1410.27 throughput_jps 35454.3
+[19:03:55] [info] [bench] Starting run ECHI concurrency 1 run 1
+[19:03:55] [info] [bench] Trial complete latency_ms 456.791 throughput_jps 109459
+[19:03:55] [info] [bench] Starting run ECHI concurrency 1 run 2
+[19:03:56] [info] [bench] Trial complete latency_ms 436.583 throughput_jps 114526
+[19:03:56] [info] [bench] Starting run ECHI concurrency 1 run 3
+[19:03:57] [info] [bench] Trial complete latency_ms 399.293 throughput_jps 125221
+[19:03:57] [info] [bench] Starting run ECHI concurrency 2 run 1
+[19:03:58] [info] [bench] Trial complete latency_ms 408.725 throughput_jps 122332
+[19:03:58] [info] [bench] Starting run ECHI concurrency 2 run 2
+[19:03:59] [info] [bench] Trial complete latency_ms 387.934 throughput_jps 128888
+[19:03:59] [info] [bench] Starting run ECHI concurrency 2 run 3
+[19:04:00] [info] [bench] Trial complete latency_ms 390.239 throughput_jps 128127
+[19:04:00] [info] [bench] Starting run ECHI concurrency 4 run 1
+[19:04:01] [info] [bench] Trial complete latency_ms 378.798 throughput_jps 131996
+[19:04:01] [info] [bench] Starting run ECHI concurrency 4 run 2
+[19:04:02] [info] [bench] Trial complete latency_ms 380.123 throughput_jps 131536
+[19:04:02] [info] [bench] Starting run ECHI concurrency 4 run 3
+[19:04:03] [info] [bench] Trial complete latency_ms 378.423 throughput_jps 132127
+[19:04:03] [info] [bench] Starting run ECHI concurrency 8 run 1
+[19:04:04] [info] [bench] Trial complete latency_ms 377.247 throughput_jps 132539
+[19:04:04] [info] [bench] Starting run ECHI concurrency 8 run 2
+[19:04:05] [info] [bench] Trial complete latency_ms 382.309 throughput_jps 130784
+[19:04:05] [info] [bench] Starting run ECHI concurrency 8 run 3
+[19:04:06] [info] [bench] Trial complete latency_ms 377.733 throughput_jps 132369
+[19:04:06] [info] [bench] Starting run ECHI concurrency 16 run 1
+[19:04:08] [info] [bench] Trial complete latency_ms 382.391 throughput_jps 130756
+[19:04:08] [info] [bench] Starting run ECHI concurrency 16 run 2
+[19:04:09] [info] [bench] Trial complete latency_ms 374.626 throughput_jps 133466
+[19:04:09] [info] [bench] Starting run ECHI concurrency 16 run 3
+[19:04:11] [info] [bench] Trial complete latency_ms 377.824 throughput_jps 132337
+[19:04:11] [info] [bench] Starting run MPI-MVCC concurrency 1 run 1
+[19:04:29] [info] [bench] Trial complete latency_ms 17286.6 throughput_jps 2892.41
+[19:04:29] [info] [bench] Starting run MPI-MVCC concurrency 1 run 2
+[19:04:46] [info] [bench] Trial complete latency_ms 17182.6 throughput_jps 2909.92
+[19:04:47] [info] [bench] Starting run MPI-MVCC concurrency 1 run 3
+[19:05:07] [info] [bench] Trial complete latency_ms 20098.7 throughput_jps 2487.72
+[19:05:07] [info] [bench] Starting run MPI-MVCC concurrency 2 run 1
+[19:05:34] [info] [bench] Trial complete latency_ms 26191.1 throughput_jps 1909.04
+[19:05:35] [info] [bench] Starting run MPI-MVCC concurrency 2 run 2
+[19:06:01] [info] [bench] Trial complete latency_ms 26348.1 throughput_jps 1897.67
+[19:06:02] [info] [bench] Starting run MPI-MVCC concurrency 2 run 3
+[19:06:30] [info] [bench] Trial complete latency_ms 27631.7 throughput_jps 1809.52
+[19:06:30] [info] [bench] Starting run MPI-MVCC concurrency 4 run 1
+[19:07:02] [info] [bench] Trial complete latency_ms 31489.9 throughput_jps 1587.81
+[19:07:02] [info] [bench] Starting run MPI-MVCC concurrency 4 run 2
+[19:07:34] [info] [bench] Trial complete latency_ms 30847.6 throughput_jps 1620.87
+[19:07:34] [info] [bench] Starting run MPI-MVCC concurrency 4 run 3
+[19:08:06] [info] [bench] Trial complete latency_ms 30865.2 throughput_jps 1619.94
+[19:08:06] [info] [bench] Starting run MPI-MVCC concurrency 8 run 1
+[19:08:38] [info] [bench] Trial complete latency_ms 31187.2 throughput_jps 1603.22
+[19:08:38] [info] [bench] Starting run MPI-MVCC concurrency 8 run 2
+[19:09:09] [info] [bench] Trial complete latency_ms 30990.5 throughput_jps 1613.4
+[19:09:10] [info] [bench] Starting run MPI-MVCC concurrency 8 run 3
+[19:09:42] [info] [bench] Trial complete latency_ms 31464.3 throughput_jps 1589.1
+[19:09:42] [info] [bench] Starting run MPI-MVCC concurrency 16 run 1
+[19:10:14] [info] [bench] Trial complete latency_ms 31047 throughput_jps 1610.46
+[19:10:14] [info] [bench] Starting run MPI-MVCC concurrency 16 run 2
+[19:10:47] [info] [bench] Trial complete latency_ms 32540.7 throughput_jps 1536.54
+[19:10:47] [info] [bench] Starting run MPI-MVCC concurrency 16 run 3
+[19:11:19] [info] [bench] Trial complete latency_ms 31163.6 throughput_jps 1604.43
+[19:11:20] [info] [bench] Starting run BF-CSI concurrency 1 run 1
+[19:11:21] [info] [bench] Trial complete latency_ms 529.63 throughput_jps 94405.5
+[19:11:21] [info] [bench] Starting run BF-CSI concurrency 1 run 2
+[19:11:23] [info] [bench] Trial complete latency_ms 509.958 throughput_jps 98047.3
+[19:11:23] [info] [bench] Starting run BF-CSI concurrency 1 run 3
+[19:11:25] [info] [bench] Trial complete latency_ms 515.27 throughput_jps 97036.5
+[19:11:25] [info] [bench] Starting run BF-CSI concurrency 2 run 1
+[19:11:26] [info] [bench] Trial complete latency_ms 527.218 throughput_jps 94837.4
+[19:11:26] [info] [bench] Starting run BF-CSI concurrency 2 run 2
+[19:11:28] [info] [bench] Trial complete latency_ms 537.545 throughput_jps 93015.5
+[19:11:28] [info] [bench] Starting run BF-CSI concurrency 2 run 3
+[19:11:30] [info] [bench] Trial complete latency_ms 536.419 throughput_jps 93210.7
+[19:11:30] [info] [bench] Starting run BF-CSI concurrency 4 run 1
+[19:11:32] [info] [bench] Trial complete latency_ms 600.447 throughput_jps 83271.3
+[19:11:32] [info] [bench] Starting run BF-CSI concurrency 4 run 2
+[19:11:34] [info] [bench] Trial complete latency_ms 608.434 throughput_jps 82178.2
+[19:11:34] [info] [bench] Starting run BF-CSI concurrency 4 run 3
+[19:11:36] [info] [bench] Trial complete latency_ms 600.87 throughput_jps 83212.7
+[19:11:36] [info] [bench] Starting run BF-CSI concurrency 8 run 1
+[19:11:38] [info] [bench] Trial complete latency_ms 825.687 throughput_jps 60555.7
+[19:11:38] [info] [bench] Starting run BF-CSI concurrency 8 run 2
+[19:11:40] [info] [bench] Trial complete latency_ms 817.518 throughput_jps 61160.8
+[19:11:40] [info] [bench] Starting run BF-CSI concurrency 8 run 3
+[19:11:42] [info] [bench] Trial complete latency_ms 814.768 throughput_jps 61367.1
+[19:11:42] [info] [bench] Starting run BF-CSI concurrency 16 run 1
+[19:11:45] [info] [bench] Trial complete latency_ms 1587.07 throughput_jps 31504.6
+[19:11:45] [info] [bench] Starting run BF-CSI concurrency 16 run 2
+[19:11:48] [info] [bench] Trial complete latency_ms 1696.46 throughput_jps 29473.2
+[19:11:48] [info] [bench] Starting run BF-CSI concurrency 16 run 3
+[19:11:51] [info] [bench] Trial complete latency_ms 1764.71 throughput_jps 28333.2

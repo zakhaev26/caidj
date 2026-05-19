@@ -1,0 +1,4 @@
+protocol,concurrency,run_id,join_latency_ms,throughput_jps,lock_contention_rate,memory_overhead_mb,build_time_ms,probe_count,probe_blocked,write_count,gc_runs,bf_fast_path,bf_false_positive,bf_rebuilds
+BF-CSI,16,1,1208.13,41386.4,0,4.73753,212.482,50000,0,129804,0,3441,0,0
+BF-CSI,16,2,682.476,73262.6,0,4.07043,85.3167,50000,0,74554,0,3682,0,0
+BF-CSI,16,3,1023.12,48870,0,4.94755,89.0457,50000,0,150327,0,3217,0,0

@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "config": {
+  "seed": 42,
+  "zipf_alpha": 1.2,
+  "domain_size": 200000,
+  "r_size": 150000,
+  "s_size": 50000,
+  "num_runs": 3,
+  "trial_duration_ms": 30000,
+  "num_probe_threads": 10,
+  "concurrency_levels": [1],
+  "protocols": ["bfcsi"],
+  "output_dir": "results\\bfcsi_c1",
+  "write_csv": true,
+  "write_json": true,
+  "log_level": "info",
+  "echi_delta_threshold": 1000,
+  "echi_epoch_interval_ms": 100,
+  "mpimvcc_gc_interval_ms": 500,
+  "bfcsi_fpr": 0.01,
+  "bfcsi_rebuild_threshold": 0.2,
+  "bfcsi_num_shards": 16,
+  "bfcsi_fp_cache_capacity": 4096,
+  "insert_fraction": 0.8
+},
+  "results": [
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 1,
+      "run_id": 1,
+      "join_latency_ms": 314.837,
+      "throughput_jps": 158812,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.13249,
+      "build_time_ms": 88.2757,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1085,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3942,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3284656
+      },
+      "txn_stats": {
+        "total_writes": 1085,
+        "total_inserts": 869,
+        "total_deletes": 216,
+        "write_rate_per_sec": 3438.75
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 1,
+      "run_id": 2,
+      "join_latency_ms": 158.726,
+      "throughput_jps": 315008,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.14407,
+      "build_time_ms": 113.937,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 759,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3923,
+        "bf_false_positive": 1,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3296800
+      },
+      "txn_stats": {
+        "total_writes": 759,
+        "total_inserts": 617,
+        "total_deletes": 142,
+        "write_rate_per_sec": 4754.3
+      }
+    },
+    {
+      "protocol": "BF-CSI",
+      "concurrency": 1,
+      "run_id": 3,
+      "join_latency_ms": 220.502,
+      "throughput_jps": 226755,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 3.16225,
+      "build_time_ms": 152.113,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 861,
+        "epoch_transitions": 0,
+        "gc_runs": 0,
+        "bf_fast_path": 3819,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 0,
+        "memory_bytes": 3315864
+      },
+      "txn_stats": {
+        "total_writes": 861,
+        "total_inserts": 689,
+        "total_deletes": 172,
+        "write_rate_per_sec": 3891.55
+      }
+    }
+  ]
+}

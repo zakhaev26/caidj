@@ -1,0 +1,4 @@
+protocol,concurrency,run_id,join_latency_ms,throughput_jps,lock_contention_rate,memory_overhead_mb,build_time_ms,probe_count,probe_blocked,write_count,gc_runs,bf_fast_path,bf_false_positive,bf_rebuilds
+NHJ,1,1,274.516,182138,0.08504,2.9084,10.1436,50000,4252,19960,0,0,0,0
+NHJ,1,2,208.166,240193,0.05242,2.79235,8.2978,50000,2621,9133,0,0,0,0
+NHJ,1,3,162.029,308587,0.04502,2.7313,8.3165,50000,2251,3772,0,0,0,0

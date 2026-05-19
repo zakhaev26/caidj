@@ -1,0 +1,10 @@
+^C:\USERS\SOUBHIK KUMAR GON\DESKTOP\CODES\CAIDJ\BUILD\DEBUG\CMAKEFILES\316CD8B97E01B6A62E7BDB4831CE429E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Soubhik Kumar Gon/Desktop/codes/caidj" "-BC:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/debug" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/debug/CAIDJ.slnx"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

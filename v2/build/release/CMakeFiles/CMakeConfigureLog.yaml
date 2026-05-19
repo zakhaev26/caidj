@@ -1,0 +1,1142 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Volta\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\MinGW\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PyManager\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\WinMerge"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Volta\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\.local\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Soubhik Kumar Gon\\go\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\npm"
+        - "c:\\Users\\Soubhik Kumar Gon\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.4.0+6e61e96ac for .NET Framework
+      Build started 19-05-2026 1.07.20 PM.
+      
+      Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:02.59
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/4.2.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files/Volta/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft VS Code/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/MinGW/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/Go/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/PyManager/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/WinMerge/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Volta\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\MinGW\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PyManager\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\WinMerge"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Volta\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\.local\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Soubhik Kumar Gon\\go\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\npm"
+        - "c:\\Users\\Soubhik Kumar Gon\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files/Volta/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft VS Code/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/MinGW/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/Go/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/PyManager/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/WinMerge/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Program Files/Volta/lld-link.com"
+      - "C:/Program Files/Volta/lld-link.exe"
+      - "C:/Program Files/Volta/lld-link"
+      - "C:/Python314/Scripts/lld-link.com"
+      - "C:/Python314/Scripts/lld-link.exe"
+      - "C:/Python314/Scripts/lld-link"
+      - "C:/Python314/lld-link.com"
+      - "C:/Python314/lld-link.exe"
+      - "C:/Python314/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Program Files/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Program Files/Microsoft VS Code/bin/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/MinGW/bin/lld-link.com"
+      - "C:/MinGW/bin/lld-link.exe"
+      - "C:/MinGW/bin/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Program Files/Go/bin/lld-link.com"
+      - "C:/Program Files/Go/bin/lld-link.exe"
+      - "C:/Program Files/Go/bin/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files/PyManager/lld-link.com"
+      - "C:/Program Files/PyManager/lld-link.exe"
+      - "C:/Program Files/PyManager/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/WinMerge/lld-link.com"
+      - "C:/Program Files/WinMerge/lld-link.exe"
+      - "C:/Program Files/WinMerge/lld-link"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/lld-link.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/lld-link.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/lld-link"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/lld-link.com"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/lld-link.exe"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/lld-link"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/lld-link.com"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/lld-link.exe"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/lld-link"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/lld-link"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.com"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.exe"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Volta\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\MinGW\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PyManager\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\WinMerge"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Volta\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\.local\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Soubhik Kumar Gon\\go\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\npm"
+        - "c:\\Users\\Soubhik Kumar Gon\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files/Volta/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft VS Code/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/MinGW/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/Go/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/PyManager/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/WinMerge/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Volta\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\MinGW\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PyManager\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\WinMerge"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Volta\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\.local\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Soubhik Kumar Gon\\go\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\npm"
+        - "c:\\Users\\Soubhik Kumar Gon\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files/Volta/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft VS Code/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/MinGW/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/Go/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/PyManager/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/WinMerge/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt"
+      - "C:/Program Files/Volta/mt.com"
+      - "C:/Program Files/Volta/mt.exe"
+      - "C:/Program Files/Volta/mt"
+      - "C:/Python314/Scripts/mt.com"
+      - "C:/Python314/Scripts/mt.exe"
+      - "C:/Python314/Scripts/mt"
+      - "C:/Python314/mt.com"
+      - "C:/Python314/mt.exe"
+      - "C:/Python314/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files/Microsoft VS Code/bin/mt.com"
+      - "C:/Program Files/Microsoft VS Code/bin/mt.exe"
+      - "C:/Program Files/Microsoft VS Code/bin/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/MinGW/bin/mt.com"
+      - "C:/MinGW/bin/mt.exe"
+      - "C:/MinGW/bin/mt"
+      - "C:/ProgramData/chocolatey/bin/mt.com"
+      - "C:/ProgramData/chocolatey/bin/mt.exe"
+      - "C:/ProgramData/chocolatey/bin/mt"
+      - "C:/Program Files/Go/bin/mt.com"
+      - "C:/Program Files/Go/bin/mt.exe"
+      - "C:/Program Files/Go/bin/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Program Files/PyManager/mt.com"
+      - "C:/Program Files/PyManager/mt.exe"
+      - "C:/Program Files/PyManager/mt"
+      - "C:/Program Files/nodejs/mt.com"
+      - "C:/Program Files/nodejs/mt.exe"
+      - "C:/Program Files/nodejs/mt"
+      - "C:/Program Files/WinMerge/mt.com"
+      - "C:/Program Files/WinMerge/mt.exe"
+      - "C:/Program Files/WinMerge/mt"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/mt.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/mt.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/mt"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/mt.com"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/mt.exe"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/mt"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/mt.com"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/mt.exe"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/mt"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/mt.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/mt.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/mt"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.com"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.exe"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Volta\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\MinGW\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PyManager\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\WinMerge"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Volta\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\.local\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Soubhik Kumar Gon\\go\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\npm"
+        - "c:\\Users\\Soubhik Kumar Gon\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files/Volta/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft VS Code/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/MinGW/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/Go/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/PyManager/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/WinMerge/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Volta\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\MinGW\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PyManager\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\WinMerge"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Volta\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\.local\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Soubhik Kumar Gon\\go\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\npm"
+        - "c:\\Users\\Soubhik Kumar Gon\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:580 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:553 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC-CXX.cmake:6 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files/Volta/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Microsoft VS Code/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/MinGW/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/Go/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/PyManager/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/WinMerge/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/CAIDJ/bin/"
+      - "C:/Program Files (x86)/CAIDJ/sbin/"
+      - "C:/Program Files (x86)/CAIDJ/"
+    searched_directories:
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc"
+      - "C:/Program Files/Volta/rc.com"
+      - "C:/Program Files/Volta/rc.exe"
+      - "C:/Program Files/Volta/rc"
+      - "C:/Python314/Scripts/rc.com"
+      - "C:/Python314/Scripts/rc.exe"
+      - "C:/Python314/Scripts/rc"
+      - "C:/Python314/rc.com"
+      - "C:/Python314/rc.exe"
+      - "C:/Python314/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files/Microsoft VS Code/bin/rc.com"
+      - "C:/Program Files/Microsoft VS Code/bin/rc.exe"
+      - "C:/Program Files/Microsoft VS Code/bin/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/MinGW/bin/rc.com"
+      - "C:/MinGW/bin/rc.exe"
+      - "C:/MinGW/bin/rc"
+      - "C:/ProgramData/chocolatey/bin/rc.com"
+      - "C:/ProgramData/chocolatey/bin/rc.exe"
+      - "C:/ProgramData/chocolatey/bin/rc"
+      - "C:/Program Files/Go/bin/rc.com"
+      - "C:/Program Files/Go/bin/rc.exe"
+      - "C:/Program Files/Go/bin/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/PyManager/rc.com"
+      - "C:/Program Files/PyManager/rc.exe"
+      - "C:/Program Files/PyManager/rc"
+      - "C:/Program Files/nodejs/rc.com"
+      - "C:/Program Files/nodejs/rc.exe"
+      - "C:/Program Files/nodejs/rc"
+      - "C:/Program Files/WinMerge/rc.com"
+      - "C:/Program Files/WinMerge/rc.exe"
+      - "C:/Program Files/WinMerge/rc"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/rc.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/rc.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Volta/bin/rc"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/rc.com"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/rc.exe"
+      - "C:/Users/Soubhik Kumar Gon/.local/bin/rc"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/rc.com"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/rc.exe"
+      - "C:/Users/Soubhik Kumar Gon/go/bin/rc"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/rc.com"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/rc.exe"
+      - "C:/Users/Soubhik Kumar Gon/AppData/Roaming/npm/rc"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.com"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.exe"
+      - "C:/Users/Soubhik Kumar Gon/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files (x86)/CAIDJ/bin/rc.com"
+      - "C:/Program Files (x86)/CAIDJ/bin/rc.exe"
+      - "C:/Program Files (x86)/CAIDJ/bin/rc"
+      - "C:/Program Files (x86)/CAIDJ/sbin/rc.com"
+      - "C:/Program Files (x86)/CAIDJ/sbin/rc.exe"
+      - "C:/Program Files (x86)/CAIDJ/sbin/rc"
+      - "C:/Program Files (x86)/CAIDJ/rc.com"
+      - "C:/Program Files (x86)/CAIDJ/rc.exe"
+      - "C:/Program Files (x86)/CAIDJ/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Volta\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\MinGW\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PyManager\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\WinMerge"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Volta\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\.local\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Soubhik Kumar Gon\\go\\bin"
+        - "C:\\Users\\Soubhik Kumar Gon\\AppData\\Roaming\\npm"
+        - "c:\\Users\\Soubhik Kumar Gon\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/CAIDJ"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/CAIDJ"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-91rgih"
+      binary: "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-91rgih"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-91rgih'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fa337.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.4.0+6e61e96ac for .NET Framework
+        Build started 19-05-2026 1.07.23 PM.
+        
+        Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-91rgih\\cmTC_fa337.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-91rgih\\Debug\\".
+          Creating directory "cmTC_fa337.dir\\Debug\\cmTC_fa337.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_fa337.dir\\Debug\\cmTC_fa337.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_fa337.dir\\Debug\\cmTC_fa337.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_fa337.dir\\Debug\\\\" /Fd"cmTC_fa337.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35728 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_fa337.dir\\Debug\\\\" /Fd"cmTC_fa337.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-91rgih\\Debug\\cmTC_fa337.exe" /INCREMENTAL /ILK:"cmTC_fa337.dir\\Debug\\cmTC_fa337.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-91rgih/Debug/cmTC_fa337.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-91rgih/Debug/cmTC_fa337.lib" /MACHINE:X64  /machine:x64 cmTC_fa337.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_fa337.vcxproj -> C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-91rgih\\Debug\\cmTC_fa337.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_fa337.dir\\Debug\\cmTC_fa337.tlog\\unsuccessfulbuild".
+          Touching "cmTC_fa337.dir\\Debug\\cmTC_fa337.tlog\\cmTC_fa337.lastbuildstate".
+        Done Building Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-91rgih\\cmTC_fa337.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.15
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35728.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:162 (check_cxx_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-ukrehz"
+      binary: "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-ukrehz"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-ukrehz'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fc3d8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.4.0+6e61e96ac for .NET Framework
+        Build started 19-05-2026 1.07.26 PM.
+        
+        Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\cmTC_fc3d8.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\Debug\\".
+          Creating directory "cmTC_fc3d8.dir\\Debug\\cmTC_fc3d8.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_fc3d8.dir\\Debug\\cmTC_fc3d8.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_fc3d8.dir\\Debug\\cmTC_fc3d8.tlog\\unsuccessfulbuild".
+        ComputeStdModulesCompileInputs:
+          Reading library manifest file 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\modules.json' which provides data for library 'microsoft/STL'.
+          Adding module source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.ixx' from library 'microsoft/STL' to be built with this project.
+          Adding module source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+        MakeDirsForCl:
+          Creating directory "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\cmTC_fc3d8.dir\\Debug\\microsoft\\STL".
+        SetModuleDependencies:
+          Creating directory "cmTC_fc3d8.dir\\Debug\\cmTC_fc3d8_MD.tlog\\".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /std:c++20 /Fo"cmTC_fc3d8.dir\\Debug\\\\" /Fd"cmTC_fc3d8.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35728 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /std:c++20 /Fo"cmTC_fc3d8.dir\\Debug\\\\" /Fd"cmTC_fc3d8.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\src.cxx"
+          src.cxx
+        C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\cmTC_fc3d8.vcxproj]
+        Done Building Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\cmTC_fc3d8.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\cmTC_fc3d8.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-ukrehz\\cmTC_fc3d8.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:01.27
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:175 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:238 (_threads_check_lib)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-x1xlxq"
+      binary: "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-x1xlxq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-x1xlxq'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ecc79.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.4.0+6e61e96ac for .NET Framework
+        Build started 19-05-2026 1.07.28 PM.
+        
+        Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\cmTC_ecc79.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\Debug\\".
+          Creating directory "cmTC_ecc79.dir\\Debug\\cmTC_ecc79.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ecc79.dir\\Debug\\cmTC_ecc79.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ecc79.dir\\Debug\\cmTC_ecc79.tlog\\unsuccessfulbuild".
+        ComputeStdModulesCompileInputs:
+          Reading library manifest file 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\modules.json' which provides data for library 'microsoft/STL'.
+          Adding module source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.ixx' from library 'microsoft/STL' to be built with this project.
+          Adding module source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+        MakeDirsForCl:
+          Creating directory "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\cmTC_ecc79.dir\\Debug\\microsoft\\STL".
+        SetModuleDependencies:
+          Creating directory "cmTC_ecc79.dir\\Debug\\cmTC_ecc79_MD.tlog\\".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /std:c++20 /Fo"cmTC_ecc79.dir\\Debug\\\\" /Fd"cmTC_ecc79.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\CheckFunctionExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35728 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /std:c++20 /Fo"cmTC_ecc79.dir\\Debug\\\\" /Fd"cmTC_ecc79.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\CheckFunctionExists.cxx"
+          CheckFunctionExists.cxx
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\Debug\\cmTC_ecc79.exe" /INCREMENTAL /ILK:"cmTC_ecc79.dir\\Debug\\cmTC_ecc79.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-x1xlxq/Debug/cmTC_ecc79.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-x1xlxq/Debug/cmTC_ecc79.lib" /MACHINE:X64  /machine:x64 cmTC_ecc79.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\cmTC_ecc79.vcxproj]
+        Done Building Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\cmTC_ecc79.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\cmTC_ecc79.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-x1xlxq\\cmTC_ecc79.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:01.35
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:175 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:239 (_threads_check_lib)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-gs2ye3"
+      binary: "C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-gs2ye3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-gs2ye3'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ab527.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.4.0+6e61e96ac for .NET Framework
+        Build started 19-05-2026 1.07.30 PM.
+        
+        Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\cmTC_ab527.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\Debug\\".
+          Creating directory "cmTC_ab527.dir\\Debug\\cmTC_ab527.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ab527.dir\\Debug\\cmTC_ab527.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ab527.dir\\Debug\\cmTC_ab527.tlog\\unsuccessfulbuild".
+        ComputeStdModulesCompileInputs:
+          Reading library manifest file 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\modules.json' which provides data for library 'microsoft/STL'.
+          Adding module source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.ixx' from library 'microsoft/STL' to be built with this project.
+          Adding module source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+        MakeDirsForCl:
+          Creating directory "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\cmTC_ab527.dir\\Debug\\microsoft\\STL".
+        SetModuleDependencies:
+          Creating directory "cmTC_ab527.dir\\Debug\\cmTC_ab527_MD.tlog\\".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /std:c++20 /Fo"cmTC_ab527.dir\\Debug\\\\" /Fd"cmTC_ab527.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\CheckFunctionExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35728 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /std:c++20 /Fo"cmTC_ab527.dir\\Debug\\\\" /Fd"cmTC_ab527.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\CheckFunctionExists.cxx"
+          CheckFunctionExists.cxx
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\Debug\\cmTC_ab527.exe" /INCREMENTAL /ILK:"cmTC_ab527.dir\\Debug\\cmTC_ab527.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-gs2ye3/Debug/cmTC_ab527.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Soubhik Kumar Gon/Desktop/codes/caidj/build/release/CMakeFiles/CMakeScratch/TryCompile-gs2ye3/Debug/cmTC_ab527.lib" /MACHINE:X64  /machine:x64 cmTC_ab527.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\cmTC_ab527.vcxproj]
+        Done Building Project "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\cmTC_ab527.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\cmTC_ab527.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Soubhik Kumar Gon\\Desktop\\codes\\caidj\\build\\release\\CMakeFiles\\CMakeScratch\\TryCompile-gs2ye3\\cmTC_ab527.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:01.33
+        
+      exitCode: 1
+...

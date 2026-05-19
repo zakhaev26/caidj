@@ -1,0 +1,35 @@
+[data]
+seed        = 42
+zipf_alpha  = 1.2
+domain_size = 200000
+r_size      = 150000
+s_size      = 50000
+
+[bench]
+num_runs           = 3
+trial_duration_ms  = 30000
+num_probe_threads  = 10
+concurrency_levels = [1, 2, 4, 8, 16]
+protocols          = ["nhj", "echi", "mpimvcc", "bfcsi"]
+
+[output]
+dir        = "results/"
+write_csv  = true
+write_json = true
+log_level  = "info"
+
+[echi]
+delta_threshold   = 1000
+epoch_interval_ms = 100
+
+[mpimvcc]
+gc_interval_ms = 500
+
+[bfcsi]
+fpr               = 0.01
+rebuild_threshold = 0.20
+num_shards        = 16
+fp_cache_capacity = 4096
+
+[txn]
+insert_fraction = 0.80

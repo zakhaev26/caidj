@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "config": {
+  "seed": 42,
+  "zipf_alpha": 1.2,
+  "domain_size": 200000,
+  "r_size": 150000,
+  "s_size": 50000,
+  "num_runs": 3,
+  "trial_duration_ms": 30000,
+  "num_probe_threads": 10,
+  "concurrency_levels": [2],
+  "protocols": ["mpimvcc"],
+  "output_dir": "results\\mpimvcc_c2",
+  "write_csv": true,
+  "write_json": true,
+  "log_level": "info",
+  "echi_delta_threshold": 1000,
+  "echi_epoch_interval_ms": 100,
+  "mpimvcc_gc_interval_ms": 500,
+  "bfcsi_fpr": 0.01,
+  "bfcsi_rebuild_threshold": 0.2,
+  "bfcsi_num_shards": 16,
+  "bfcsi_fp_cache_capacity": 4096,
+  "insert_fraction": 0.8
+},
+  "results": [
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 2,
+      "run_id": 1,
+      "join_latency_ms": 5405.84,
+      "throughput_jps": 9249.26,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 12.6975,
+      "build_time_ms": 98.9275,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 815,
+        "epoch_transitions": 0,
+        "gc_runs": 9,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.0084,
+        "memory_bytes": 13314248
+      },
+      "txn_stats": {
+        "total_writes": 815,
+        "total_inserts": 681,
+        "total_deletes": 134,
+        "write_rate_per_sec": 150.674
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 2,
+      "run_id": 2,
+      "join_latency_ms": 3198.32,
+      "throughput_jps": 15633.2,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 4.66844,
+      "build_time_ms": 36.966,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 190,
+        "epoch_transitions": 0,
+        "gc_runs": 6,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.0003,
+        "memory_bytes": 4895216
+      },
+      "txn_stats": {
+        "total_writes": 190,
+        "total_inserts": 146,
+        "total_deletes": 44,
+        "write_rate_per_sec": 59.3428
+      }
+    },
+    {
+      "protocol": "MPI-MVCC",
+      "concurrency": 2,
+      "run_id": 3,
+      "join_latency_ms": 7032.41,
+      "throughput_jps": 7109.93,
+      "lock_contention_rate": 0,
+      "memory_overhead_mb": 4.51283,
+      "build_time_ms": 38.1785,
+      "index_stats": {
+        "probe_count": 50000,
+        "probe_blocked": 0,
+        "write_count": 1348,
+        "epoch_transitions": 0,
+        "gc_runs": 11,
+        "bf_fast_path": 0,
+        "bf_false_positive": 0,
+        "bf_rebuilds": 0,
+        "version_chain_avg": 1.00119,
+        "memory_bytes": 4732040
+      },
+      "txn_stats": {
+        "total_writes": 1348,
+        "total_inserts": 1113,
+        "total_deletes": 235,
+        "write_rate_per_sec": 191.511
+      }
+    }
+  ]
+}
