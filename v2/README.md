@@ -2,8 +2,6 @@
 ### Concurrency Aware Indexing for Distributed Join
 **IIIT Bhubaneswar BTech Final Year Project, 2026**
 
-> **Purpose of this document:** A fully self-contained specification that can be handed to one or more AI coding agents to produce the complete, compilable, tested C++ implementation of CAIDJ with zero additional context.
-
 ---
 
 ## Table of Contents
